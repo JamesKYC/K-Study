@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <script src="../js/font.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .nav_bottom{
+            width: 100%;
+            height: 2.94rem;
+            background: url(../images/banners.png) no-repeat;
+            background-size: 100%;
+        }
+        .centent{
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0.58rem 0 0;
+        }
+            .container .centent input[name~=jhm]{
+                width: 55%;
+            }
+            span.jhm{
+                float: right;
+                box-sizing: border-box;
+                border-radius: 5px;
+                width: 40%;
+                text-align: center;
+                line-height: 0.76rem;
+                font-size: 0.3rem;
+                font-family: '微软雅黑';
+                color: #fff;
+                background-color: #FFA751;
+                background-size: 1.45rem 0.78rem;
+            }
+            span.pass{
+                float: left;
+                padding: 0.06rem 0 0.25rem 0;
+                width: 100%;
+            }
+            span.pass input, span.pass a{
+                float: left;
+            }
+            form a{
+                text-decoration: none;
+                color: #6c6c6c;
+            }
+            form button:last-child{
+                float:right;
+                font-size: 0.34rem;
+                color: #fff;
+                background-color: #FFA751;
+            }
+            form button{
+                float: left;
+                margin: 0 0 0.6rem 0;
+                border: 1px solid #FFA751;
+                border-radius: 5px;
+                width: 2.23rem;
+                height: 0.78rem;
+                /* letter-spacing: 30px; */
+                /* text-align: center; */
+                font-family: '微软雅黑';
+                font-size: 0.21rem;
+                color: #FFA751;
+                background-color: #fff;
+            }
+            .centent_footer{
+                width: 100%;
+                height: 0.3rem;
+                text-align: center;
+                font-size: 0.21rem;
+                font-family: '微软雅黑';
+                line-height: 0.3rem;
+            }
+            span.line{
+                display: inline-block;
+                border-top: 1px solid #CCCCCC;
+                width: 1.23rem;
+                vertical-align: middle;
+            }
+            span.txt{
+                color: #5b5b5b;
+            }
+            .centent_footer_link{
+                box-sizing: border-box;
+                padding:0.28rem 0.98rem 0.28rem;
+                width: 100%;
+            }
+            .centent_footer_link a{
+                float: left;
+                margin: 0 0.11rem;
+                width: 0.89rem;
+                height: 0.89rem;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- top begin -->
+        <div class="nav">
+            <div class="nav_top clearfix">
+                <a href="../index.html"></a>
+                <h1>注册</h1>
+                <a href="#" id="caidan" onclick="caidann()"></a>
+            </div>
+            <div class="nav_bottom">
+                <div id="public_lanmu" style="display:none;">
+                    <div class="lanmu lanmus clearfix">
+                        <dl>
+                            <dt><a href="fuwu.html"></a></dt>
+                            <dd><a href="fuwu.html">监理服务</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="gongdi_zhibo_index.html"></a></dt>
+                            <dd><a href="gongdi_zhibo_index.html">工地直播</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="baogao.html"></a></dt>
+                            <dd><a href="baogao.html">服务报告</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="yuyue.html"></a></dt>
+                            <dd><a href="yuyue.html">预约监理</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="wenti.html"></a></dt>
+                            <dd><a href="wenti.html">常见问题</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="jianliteam.html"></a></dt>
+                            <dd><a href="jianliteam.html">监理团队</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="we.html"></a></dt>
+                            <dd><a href="we.html">关于我们</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="login.html"></a></dt>
+                            <dd><a href="login.html">登陆/注册</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top end -->
+
+        <!-- centent begin -->
+        <div class="centent clearfix">
+            <form action="" method="get" class="clearfix">
+                <input type="text" name="phone_number number" placeholder="手机号" />
+                <input type="password" name="srpass number" placeholder="输入密码" />
+                <input type="password" name="qrpass number" placeholder="确认密码" />
+                <input type="text" name="jhm" placeholder="激活码" />
+                <span class="jhm">获取激活码</span>
+                <span class="pass"><input type="checkbox" name="" id=""><a>我已阅读并同意遵守《装小蜜用户服务协议》</a></span>
+                <button type="button" onclick="location.href='login.html'">已有账号&nbsp;&nbsp;直接登陆</button>
+                <button type="button" onclick="location.href='user_center.html'">确&nbsp;&nbsp;定</button>
+            </form>
+            <div class="centent_footer">
+                <span class="line"></span>
+                <span class="txt">使用以下帐号直接登录</span>
+                <span class="line"></span>
+                <div class="centent_footer_link clearfix">
+                    <a href="#" style="background: url(../images/weibo.png) no-repeat;background-size:100%;"></a>
+                    <a href="#" style="background: url(../images/qq.png) no-repeat;background-size:100%;"></a>
+                    <a href="#" style="background: url(../images/weixin.png) no-repeat;background-size:100%;"></a>
+                    <a href="#" style="background: url(../images/dou.png) no-repeat;background-size:100%;"></a>
+                </div>
+            </div>
+        </div>
+        <!-- centent end -->
+    </div>
+</body>
+</html>

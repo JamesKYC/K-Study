@@ -1,0 +1,157 @@
+@charset "utf-8";
+.banner{
+    float:left;
+    margin: 0 12px 9px 10px;
+    padding: 5px 7px 6px;
+    border-radius: 4px;
+    width: 715px;
+    height: 255px;
+    background: #fff url(../images/1_07.jpg) no-repeat center center;
+}
+.column{
+    float: left;
+    margin: 0;
+    padding: 6px;
+    border-radius: 4px;
+    width: 207px;
+    height: 254px;
+    background-color: #fff;
+}
+div.span_public span{
+    display: block;
+    margin: 0px;
+    height: 44px;
+    border-bottom: 1px dotted black;
+    text-indent: 8px;
+    background: url(../images/1_07.png) no-repeat 190px center;
+}
+div.span_public span:last-child{
+    border: none;
+    height: 45px;
+}
+div.span_public span img{
+    float: left;
+    margin:6px 0px 0px 0px;
+    border:1px solid black;
+}
+div.wuliu div.span_public span a{
+    font-size: 14px;
+    color: #34373c;
+}
+.column span,.guanyu span, .dongtai span, .lianxi span{
+    display: block;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    height: 25px;
+    text-indent: 20px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #fff;
+    background: #303338 url(../images/1_26.png) no-repeat 5px center;
+}
+.houqin span, .chuangyuan span, .chuangchu span{
+    color: black;
+    background-color: #fff;
+}
+dl.column_public{
+    position: relative;
+}
+dl,dt,dd{
+    padding:0;
+    margin: 0;
+}
+dt + dd{
+    margin-top: 5px;
+    width: 207px;
+    line-height: 14px;
+}
+div.column dd:last-child{
+    float: right;
+    position: absolute;
+    top: 200px;
+    left: 170px;
+    width: auto;
+}
+dl.column_public dd a{
+    text-decoration: none;
+    font-size: 11px;
+    color: black;
+}
+.notice{
+    float: left;
+    margin: 0 0 10px 10px;
+    padding: 0 15px 0 0;
+    border-radius: 4px;
+    width: 945px;
+    height: 35px;
+    text-indent: 3em;
+    line-height: 35px;
+    font-size: 12px;
+    color: #3F4246;
+    background: #F6F6F6 url(../images/laba.png) no-repeat 6px center;
+}
+.notice p{
+    /* float: left; */
+    display: inline;
+    margin-left: 25px;
+    color: #1f1f1f;
+}
+.p_right{
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+.guanyu{
+    float: left;
+    margin: 0 8px 9px 10px;
+    padding: 6px;
+    border-radius: 4px;
+    width: 265px;
+    height: 254px;            
+    background-color: #fff;
+}
+div.guanyu dd{
+    padding: 0 5px;
+    width: 255px;
+}
+.chuangyuan{
+    margin: 0 9px;
+}
+.dongtai{
+    float: left;
+    margin: 0 9px 9px 10px; 
+    padding: 6px;
+    border-radius: 4px;
+    width: 720px;
+    height: 212px;
+    background-color: #fff;
+}
+div.dongtai div.span_public span{
+    float: right;
+    width: 710px;
+    height: 30px;
+    text-indent: 20px;
+    line-height: 30px;
+    color: #333333;
+    background: url(../images/1_39.png) no-repeat left center;
+}
+div.dongtai div.span_public span a + a{
+    float:right;
+}
+.lianxi{
+    float: left;
+    padding: 6px;
+    border-radius: 4px;
+    width: 207px;
+    height: 212px;
+    background-color: #fff;
+}
+.lianxi .lianxi_p{
+    display:block;
+    margin: 9px 0px;
+    height: 51px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-indent: 4px;
+    line-height: 25px;
+}

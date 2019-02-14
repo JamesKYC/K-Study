@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户中心</title>
+    <script src="../js/font.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .nav_bottom{
+            width: 100%;
+            height: 2.94rem;
+            background: url(../images/user_centent_banner.jpg) no-repeat;
+            background-size: 100%;
+        }
+        .centent{
+            position: relative;
+            padding: 2rem 0.43rem 1.26em;
+            box-sizing: border-box;
+            width: 100%;
+            text-align: center;
+        }
+            img{
+                width: 1.82rem;
+                height: 1.82rem;
+            }
+            .centent dl{
+                /* border-radius: 0.91rem; */
+                /* width: 1.82rem;
+                height: 1.82rem; */
+                /* background-color: #000; */
+                position: absolute;
+                top: -0.92rem;
+                left: 50%;
+                margin-left: -0.91rem;
+            }
+            .centent dd{
+                text-align: center;
+                font-size: 0.36rem;
+                line-height: 0.36rem;
+                font-family: '微软雅黑';
+                color: #5f5f5f;
+            }
+            .container .centent input{
+                float: left;
+                margin: 0.11rem 0;
+                padding: 0;
+                box-sizing: border-box;
+                border-radius: 5px;
+                border: 1px solid #C7C7C7;
+                width: 100%;
+                height: 0.79rem;
+                text-align: left;
+                text-indent: 1em;
+                font-size: 0.28rem;
+                font-family: '微软雅黑';
+                color: #5f5f5f;
+                background: #fff url(../images/jiantou.png) no-repeat 95.1% center;
+                background-size: 0.2rem 0.4rem;
+            }
+            button{
+                /* position: relative;
+                left: 50%;
+                margin: 0.33rem 0 0 -1.115rem; */
+                border-radius: 5px;
+                border: none;
+                width: 2.23rem;
+                height: 0.78rem;
+                font-family: '微软雅黑';
+                font-size: 0.34rem;
+                color: #fff;
+                background-color: #FFA751;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- top begin -->
+        <div class="nav">
+            <div class="nav_top clearfix">
+                <a href="../index.html"></a>
+                <h1>用户中心</h1>
+                <a href="#" id="caidan" onclick="caidann()"></a>
+            </div>
+            <div class="nav_bottom">
+                <div id="public_lanmu" style="display:none;">
+                    <div class="lanmu lanmus clearfix">
+                        <dl>
+                            <dt><a href="fuwu.html"></a></dt>
+                            <dd><a href="fuwu.html">监理服务</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="gongdi_zhibo_index.html"></a></dt>
+                            <dd><a href="gongdi_zhibo_index.html">工地直播</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="baogao.html"></a></dt>
+                            <dd><a href="baogao.html">服务报告</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="yuyue.html"></a></dt>
+                            <dd><a href="yuyue.html">预约监理</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="wenti.html"></a></dt>
+                            <dd><a href="wenti.html">常见问题</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="jianliteam.html"></a></dt>
+                            <dd><a href="jianliteam.html">监理团队</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="we.html"></a></dt>
+                            <dd><a href="we.html">关于我们</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="login.html"></a></dt>
+                            <dd><a href="login.html">登陆/注册</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top end -->
+
+        <!-- centent begin -->
+        <div class="centent clearfix">
+            <dl>
+                <dt><img src="../images/user_img.png" /></dt>
+                <dd>张思涵</dd>
+            </dl>
+            <input onclick="location.href='user_center_gongdi.html';" type="button" value="我的工地" >
+            <input onclick="location='user_pinlun.html';" type="button" value="我的评论" >
+            <input onclick="location.href='user_set.html';" type="button" value="账号设置" >
+            <button onclick="location.href='login.html';" type="button" >退出登录</button>
+        </div>
+        <!-- centent end -->
+    </div>
+</body>
+</html>

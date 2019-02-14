@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工地直播详情页</title>
+    <script src="../js/font.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .container{
+            background-color: #F8F8F8;
+        }
+        .nav{
+            background: url(../images/gongdi_zhibo_banner.jpg) no-repeat;
+            background-size: 100%;
+        }
+        .nav_top{
+            background:none;
+        }
+        .nav_bottom{
+            width: 100%;
+            height: 3.72rem;
+        }
+        .centent{
+            width: 100%;
+        }
+        .gongdi_xinxi{
+            margin-bottom: 0.16rem;
+            background-color: #fff;
+        }
+        .gongdi_xinxi h3{
+            text-align: center;
+            font-size: 0.3rem;
+            font-family: '微软雅黑';
+        }
+        .gongdi_xinxi dt{
+            border-top: 1px solid #E9E9E9;
+            border-bottom: 1px solid #E9E9E9;
+        }
+        .gongdi_xinxi dd{
+            float: left;
+            box-sizing: border-box;
+            padding-top: 0.74rem;
+            border-bottom: 1px solid #E9E9E9;
+            width: 2.13rem;
+            height: 1.3rem;
+            text-align: center;
+            line-height: 0.56rem;
+            font-size: 0.24rem;
+            font-family: '微软雅黑';
+            color: #4d4d4d;
+        }
+        sup{
+            position: relative;
+            top: -0.06rem;
+            vertical-align: top;
+            font-size: 0.15rem;
+        }
+        .gongdi_xinxi .noborder{
+            box-sizing: border-box;
+            border-left: 1px solid #E9E9E9;
+            border-right: 1px solid #E9E9E9;
+            width: 2.14rem;
+        }
+        .gongdi_lanmu{
+            box-sizing: border-box;
+            border-top: 1px solid #E9E9E9;
+            border-bottom: 1px solid #E9E9E9;
+            width: 100%;
+            padding: 0.2rem; 
+            background-color: #fff;
+        }
+        .gongdi_lanmu a{
+            float: left;
+            box-sizing: border-box;
+            margin: 0rem 0.1rem;
+            border-radius: 0.65rem;
+            border: 5px solid red;
+            width: 1.3rem;
+            height: 1.3rem;
+            background-color: red;
+        }
+        .ybgc_content{
+            background-color: #F8F8F8;
+        }
+        .ybgc_content h3{
+            text-indent: 1em;
+            line-height: 0.68rem;
+            font-size: 0.26rem;
+            font-family: '微软雅黑';
+            color: #fff;
+            background-color: #FF7A46;
+        }
+        .wentixian{
+            box-sizing: border-box;
+            padding: 0.2rem 0.4rem;
+            border-bottom: 1px solid #E9E9E9;
+            width: 100%;
+            background-color: #fff;
+        }
+        .wentixian h4,.wentixian p{
+            float: left;
+            padding: 0 2em;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 0.5rem;
+            font-size: 0.26rem;
+            font-family: '微软雅黑';
+            color: #4e4e4e;
+        }
+        .wentixian p{
+            padding: 0;
+            font-size: 0.24rem;
+        }
+        .wentixian strong{
+            font-family: '微软雅黑';
+            color: #757575;
+        }
+        .xize{
+            margin: 0.16rem 0 0;
+            box-sizing: border-box;
+            border-bottom: 1px solid #E9E9E9;
+            width: 100%;
+            background-color: #fff;
+        }
+        .xize h4{
+            border-top: 1px solid #E9E9E9;
+            border-bottom: 1px solid #E9E9E9;
+            text-indent: 1em;
+            line-height: 0.68rem;
+            font-size: 0.26rem;
+            font-family: '微软雅黑';
+        }
+        .ybgc_content ul{
+            margin: 0 auto;
+            padding: 0.24rem 0;
+            width: 95%;
+        }
+        .ybgc_content ul li{
+            float:left;
+            margin: 0.02rem 0;
+            padding: 0.03rem;
+            width: 48%;
+            text-indent: 1em;
+            line-height: 0.49rem;
+            font-size: 0.21rem;
+            font-family: '微软雅黑';
+            color: #757575; 
+            background-color: #f0f0f0;
+        }
+        .ybgc_content ul li.biaoti{
+            text-indent: 0;
+            text-align: center;
+            font-size: 0.24rem;
+            color: #4e4e4e;
+            background-color: #E6E6E6;
+        }
+        .ybgc_content ul li:nth-child(2n){
+            float: right;
+        }
+        .ybgc_content ul li span{
+            float: right;
+            width: 0.68rem;
+            height: 0.49rem;
+            background-color: #fff;
+        }
+        .container .ybgc_content ul.zysx{
+            width: 93%;
+        }
+        .container .ybgc_content .zysx li{
+            float: right;
+            padding-left: 0;
+            width: 95%;
+            text-indent: 0;
+            list-style-type:disc;
+            line-height: 0.32rem;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- top begin -->
+        <div class="nav">
+            <div class="nav_top clearfix">
+                <a href="gongdi_zhibo_index.html"></a>
+                <h1>工地直播</h1>
+                <a href="#" id="caidan" onclick="caidann()"></a>
+            </div>
+            <div class="nav_bottom">
+                <div id="public_lanmu" style="display:none;">
+                    <div class="lanmu lanmus clearfix">
+                        <dl>
+                            <dt><a href="fuwu.html"></a></dt>
+                            <dd><a href="fuwu.html">监理服务</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="gongdi_zhibo_index.html"></a></dt>
+                            <dd><a href="gongdi_zhibo_index.html">工地直播</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="baogao.html"></a></dt>
+                            <dd><a href="baogao.html">服务报告</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="yuyue.html"></a></dt>
+                            <dd><a href="yuyue.html">预约监理</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="wenti.html"></a></dt>
+                            <dd><a href="wenti.html">常见问题</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="jianliteam.html"></a></dt>
+                            <dd><a href="jianliteam.html">监理团队</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="we.html"></a></dt>
+                            <dd><a href="we.html">关于我们</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="login.html"></a></dt>
+                            <dd><a href="login.html">登陆/注册</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top end -->
+
+        <!-- centent begin -->
+        <div class="centent clearfix">
+            <div class="gongdi_xinxi clearfix">
+                <dl>
+                    <dt><h3>北京麒麟瑞景别墅</h3></dt>
+                    <dd style="background: url(../images/gongdi_home.png) no-repeat center 0.16rem;background-size:0.62rem;">户型:三室一厅</dd>
+                    <dd class="noborder" style="background: url(../images/gongdi_pf.png) no-repeat center 0.16rem;background-size:0.62rem;">面积:135m<sup>2</sup></dd>
+                    <dd style="background: url(../images/gongdi_money.png) no-repeat center 0.16rem;background-size:0.62rem;">户型:三室一厅</dd>
+                    <dd style="background: url(../images/gongdi_job.png) no-repeat center 0.16rem;background-size:0.62rem;">户型:三室一厅</dd>
+                    <dd class="noborder" style="background: url(../images/gongdi_gongqi.png) no-repeat center 0.16rem;background-size:0.62rem;">户型:三室一厅</dd>
+                    <dd style="background: url(../images/gongdi_name.png) no-repeat center 0.16rem;background-size:0.62rem;">户型:三室一厅</dd>
+                </dl>
+            </div>
+            <div class="gongdi_lanmu clearfix">
+                <a href="#" id="qqsh" style="background: url(../images/gongdi_qqsh.png) no-repeat center center;background-size:1.08rem;border: none;" title="ED5491" onclick="a(this.id,this.title)"></a>
+                <a href="#" id="ggjd" style="background: url(../images/gongdi_ggjd.png) no-repeat center center;background-size:1.08rem;border: none;" title="FF5858" onclick="a(this.id,this.title)"></a>
+                <a href="#" id="ybgc" style="background: url(../images/gongdi_ybgc.png) no-repeat center center;background-size:1.08rem;border: none;" title="FF7A46" onclick="a(this.id,this.title)"></a>
+                <a href="#" id="zqgc" style="background: url(../images/gongdi_zqgc.png) no-repeat center center;background-size:1.08rem;border: none;" title="FFAE2E" onclick="a(this.id,this.title)"></a>
+                <a href="#" id="jgys" style="background: url(../images/gongdi_jgys.png) no-repeat center center;background-size:1.08rem;border: none;" title="B6CA4C" onclick="a(this.id,this.title)"></a>
+                <a href="#" id="bgxm" style="background: url(../images/gongdi_bgxm.png) no-repeat center center;background-size:1.08rem;border: none;" title="6FC242" onclick="a(this.id,this.title)"></a>
+                <a href="#" id="clys" style="background: url(../images/gongdi_clys.png) no-repeat center center;background-size:1.08rem;border: none;" title="1CAB73" onclick="a(this.id,this.title)"></a>
+                <a href="#" id="wcd" style="background: url(../images/gongdi_wcd.png) no-repeat center center;background-size:1.08rem;border: none;" title="4FBB41" onclick="a(this.id,this.title)"></a>
+            </div>
+            <div class="ybgc_content" style="display:none;">
+                <h3>隐蔽工程问题项</h3>
+                <div class="wentixian clearfix">
+                    <h4 style="background:url(../images/gantanhao.png) no-repeat left center,url(../images/images.png) no-repeat right center;background-size: 0.34rem;">热水器水孔位置距墙太近</h4>
+                    <p>问题原因：<strong>中水管道井内漏水，已经报物业维修。</strong></p>
+                    <p>发现日期：<strong>2015-05-02</strong></p>
+                    <p style="float: right;">解决日期：<strong>2015-05-28</strong></p>
+                    <p>问题结果：<strong>未发现增项内容，达到装修要求。</strong></p>
+                </div>
+                <div class="wentixian clearfix">
+                    <h4 style="background:url(../images/gantanhao.png) no-repeat left center,url(../images/images.png) no-repeat right center;background-size: 0.34rem;">入户门有损伤已经报物业更换</h4>
+                    <p>问题原因：<strong>中水管道井内漏水，已经报物业维修。</strong></p>
+                    <p>发现日期：<strong>2015-05-02</strong></p>
+                    <p style="float: right;">解决日期：<strong>2015-05-28</strong></p>
+                    <p>问题结果：<strong>经多方协调解决，经检验已更换。 </strong></p>
+                </div>
+                <div class="xize clearfix">
+                    <h4>工程细则</h4>
+                    <ul class="clearfix">
+                        <li class="biaoti">电路改造</li>
+                        <li class="biaoti">水路改造</li>
+                        <li>接线分色<span style="background:#fff url(../images/yes.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>管道阀门口设置<span style="background:#fff url(../images/yes.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>弱点导线安装<span style="background:#fff url(../images/yes.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>阀门、笼头安装<span style="background:#fff url(../images/yes.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>零线安装是否安全<span style="background:#fff url(../images/yes.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>水管安装<span style="background:#fff url(../images/yes.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>管内导线总面积<span style="background:#fff url(../images/gantanhao.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>排水管材料<span style="background:#fff url(../images/yes.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>插座线路安装<span style="background:#fff url(../images/images.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>混水阀出水孔设置<span style="background:#fff url(../images/images.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>导线与燃气管距离<span style="background:#fff url(../images/gantanhao.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>洗手盆出水孔设置<span style="background:#fff url(../images/images.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>接线盒燃气管距离<span style="background:#fff url(../images/images.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                        <li>管道安装<span style="background:#fff url(../images/images.png) no-repeat center center;background-size: 0.34rem;"></span></li>
+                    </ul>
+                </div>
+                <div class="xize zysxc clearfix">
+                    <h4>注意事项</h4>
+                    <ul class="zysx clearfix">
+                        <li>外径在25mm以管道在转表笼头处管道牢固。</li>
+                        <li>墙体终端处设立管卡并安装不可用需改造。</li>
+                        <li>可能会导致设效果完全无法施预算不详细则。</li>
+                        <li>装小蜜提供只会不高于家装修公司步。</li>
+                        <li>体验项细节验收标准透明确保家装工程量。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- centent end -->
+    </div>
+</body>
+</html>

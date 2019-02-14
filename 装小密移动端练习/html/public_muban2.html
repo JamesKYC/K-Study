@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/font.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- top begin -->
+        <div class="nav">
+            <div class="nav_top clearfix">
+                <a href="#"></a>
+                <h1>登陆</h1>
+                <a href="#" id="caidan" onclick="caidann()"></a>
+            </div>
+            <div class="nav_bottom">
+                <div id="public_lanmu" style="display:none;">
+                    <div class="lanmu lanmus clearfix">
+                        <dl>
+                            <dt><a href="#"></a></dt>
+                            <dd><a href="#">监理服务</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#"></a></dt>
+                            <dd><a href="#">工地直播</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#"></a></dt>
+                            <dd><a href="#">服务报告</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#"></a></dt>
+                            <dd><a href="#">预约监理</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#"></a></dt>
+                            <dd><a href="#">常见问题</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#"></a></dt>
+                            <dd><a href="#">监理团队</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#"></a></dt>
+                            <dd><a href="#">关于我们</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#"></a></dt>
+                            <dd><a href="#">登陆/注册</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top end -->
+
+        <!-- centent begin -->
+        <div class="centent clearfix">
+            
+        </div>
+        <!-- centent end -->
+        
+        <!-- footer begin -->
+        <div class="footer clearfix" id="f">
+            <script>
+                window.onload = function(){
+                    var left = document.getElementById("jswidth");
+                    left.style.left = (document.getElementById("f").offsetWidth-left.offsetWidth)/2+'px';
+                }
+                 window.onresize=function(){
+                    var left = document.getElementById("jswidth");
+                    left.style.left = (document.getElementById("f").offsetWidth-left.offsetWidth)/2+'px';
+                 }
+            </script>
+            <div class="footer_top clearfix" id="jswidth">
+                <span><img src="../images/zxm.png" alt=""></span>
+                <span class="jiange"></span>
+                <dl>
+                    <dt><img src="../images/tubiao.png" alt=""></dt>
+                    <dd><p>中国建筑装修协会（CBDA）</p>
+                    <p>全国唯一授权互联网监理资质</p></dd>
+                </dl>
+            </div>
+            <h3>© 2015 ZHUANGXIAOMI.COM&nbsp;&nbsp;&nbsp;京ICP备13026313号</h3>
+        </div>
+        <!-- footer end -->
+    </div>
+</body>
+</html>
