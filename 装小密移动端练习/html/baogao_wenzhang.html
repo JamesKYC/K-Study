@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>服务报告文章</title>
+    <script src="../js/font.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .centent{
+            width: 100%;
+            background-color: #f8f8f8;
+        }
+        .title{
+            padding: 0.2rem 0 0.22rem 0;
+            text-align: center;
+            font-family: '微软雅黑';
+            font-size: 0.18rem;
+        }
+        .title strong{
+            color: #FE7200;
+        }
+        .title h4{
+            text-align: center;
+            line-height: 0.6rem;
+            font-size: 0.3rem;
+            font-family: '微软雅黑';
+            color: #595959;
+        }
+        .title a{
+            text-decoration: none;
+            color: #797979;
+        }
+        .centent img{
+            display: block;
+            width: 100%;
+        }
+        .centent dl{
+            box-sizing: border-box;
+            padding-bottom: 1.6rem;
+            background: url(../images/zang.png) no-repeat center 98.2%;
+            background-size: 1.35rem;
+        }
+        .centent dd{
+            padding: 0.18rem 0.22rem;
+        }
+        .centent dd p{
+            text-indent: 2em;
+            line-height: 0.37rem;
+            font-size: 0.22rem;
+            font-family: '微软雅黑';
+            color: #595959;
+        }
+        .centent span.biaoqian{
+            display: block;
+            margin-bottom: 0.16rem;
+            padding: 0.22rem 4.5em 0.22rem 1.5em;
+            border-bottom: 1px solid #E9E9E9;
+            /* text-indent: 1.5em; */
+            font-size: 0.18rem;
+            font-family: '微软雅黑';
+            background: #fff url(../images/wenzhang_userimg.png) no-repeat 96% center;
+            background-size: 0.5rem;
+        }
+        .centent span a{
+            text-decoration: none;
+            color: #797979;
+        }
+        .right{
+            float: right;
+        }
+        table{
+            width: 100%;
+            border-top: 1px solid #E9E9E9;
+            font-size: 0.21rem;
+            font-family: '微软雅黑';
+            color: #797979;
+            background-color: #fff;
+        }
+        table th{
+            border-bottom: 1px solid #E9E9E9;
+            line-height: 0.68rem;
+            font-size: 0.26rem;
+            font-family: '微软雅黑';
+            color:#2c2c2c;
+        }
+        table th strong{
+            font-size: 0.2rem;
+            font-family: '微软雅黑';
+            color: #fe7200;
+        }
+        table td.userimg{
+            padding: 0.26rem 0.16rem 0 0.26rem;
+            box-sizing: border-box;
+            width: 0.6rem;
+            vertical-align: top;
+        }
+        table .content{
+            padding: 0.1rem 0 0;
+            font-size: 0.24rem;
+            font-family: '微软雅黑';
+            color: #595959;
+        }
+        .userimg img{
+            float: left;
+            width: 0.6rem;
+            height: 0.6rem;
+        }
+        .name,.gongju{
+            padding-top: 0.26rem;
+        }
+        .louceng,.centent .zang a{
+            color: #fe7200;
+        }
+        .remove{
+            color: #da0000;
+            margin-left: 0.11rem;
+        }
+        .louceng{
+            margin-right: 0.11rem;
+        }
+        .louceng,.remove,.zang,.xinxi{
+            float: right;
+            text-decoration: none;
+            background: none;
+        }
+        .zang img,.xinxi img{
+            float: left;
+            padding-top: 0.1rem;
+            padding-bottom: 0.2rem;
+            width: 0.38rem;
+            height: 0.33rem;
+        }
+        .zang{
+            line-height: 0.6rem;
+            margin-right: 0.4rem;
+        }
+        .xinxi{
+            margin-right: 0.08rem;
+        }
+        .huifu{
+            width: 97.8%;
+            border: 1px solid #E6E6E6;
+            background-color: #F9F9F9;
+        }
+        .huifu td{
+            padding-left: 0.2rem;
+            padding-right: 0.12rem;
+        }
+        .huifu .name,.huifu .gongju{
+            padding-top: 0.16rem;
+        }
+        .last{
+            padding-bottom: 0.28rem;
+        }
+        .foo{
+            padding: 0 0.5rem;
+            box-sizing: border-box;
+            width: 100%;
+            height: 0.72rem;
+            line-height: 0.72rem;
+            font-size: 0.26rem;
+            font-family: '微软雅黑';
+            background-color: #FFA751;
+        }
+        .foo a,.foo .foo_right a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .foo_right{
+            float: right;
+            padding-top: 0.15rem;
+            line-height: 0.37rem;
+        }
+        .foo_right img{
+            float: left;
+            width: 0.45rem;
+            height: 0.45rem;
+        }
+        .text{
+            padding: 30px;
+            padding-bottom: 0;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .text a,.text strong{
+            float: right;
+            margin-right: 0.3rem;
+            text-decoration: none;
+            line-height: 0.55rem;
+            font-size: 0.18rem;
+            font-family: '微软雅黑';
+            color: #5b5b5b;
+        }
+        .text strong{
+            float: none;
+            margin: 0;
+            color: #FFA751;
+        }
+        .text button{
+            float: right;
+            margin-bottom: 0.35rem;
+            border: none;
+            width: 1.5rem;
+            height: 0.5rem;
+            font-size: 0.24rem;
+            font-family: '微软雅黑';
+            color: #fff;
+            background-color: #FFA751;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- top begin -->
+        <div class="nav">
+            <div class="nav_top clearfix">
+                <a href="baogao.html"></a>
+                <h1>服务报告</h1>
+                <a href="#" id="caidan" onclick="caidann()"></a>
+            </div>
+            <div class="nav_bottom">
+                <div id="public_lanmu" style="display:none;">
+                    <div class="lanmu lanmus clearfix">
+                        <dl>
+                            <dt><a href="fuwu.html"></a></dt>
+                            <dd><a href="fuwu.html">监理服务</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="gongdi_zhibo_index.html"></a></dt>
+                            <dd><a href="gongdi_zhibo_index.html">工地直播</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="baogao.html"></a></dt>
+                            <dd><a href="baogao.html">服务报告</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="yuyue.html"></a></dt>
+                            <dd><a href="yuyue.html">预约监理</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="wenti.html"></a></dt>
+                            <dd><a href="wenti.html">常见问题</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="jianliteam.html"></a></dt>
+                            <dd><a href="jianliteam.html">监理团队</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="we.html"></a></dt>
+                            <dd><a href="we.html">关于我们</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="login.html"></a></dt>
+                            <dd><a href="login.html">登陆/注册</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top end -->
+
+        <!-- centent begin -->
+        <div class="centent clearfix">
+            <div class="title">
+                <h4 style="text-indent: 1.5em;background: url(../images/tuijian.png) no-repeat 0.8rem center;background-size: 0.25rem;">懒人装修必备15条逆天装修小秘籍</h4>
+                <a>2015-04-15  / <strong>1024</strong> 人气  / <strong>104</strong> 推荐  / <strong>24</strong> 评论</a>
+            </div>
+            <dl>
+                <dt><img src="../images/baodao_wenzhang1.jpg" alt=""></dt>
+                <dd><p>装修工程不是现成的产品无论施工队还是装修公司，装修都是在装饰设计和施工过程中形成试想，装修前，装修企业内部的质检（经常误称为监理），怎么可能指出自家预算中的漏洞，帮助消费者签订公平、透明的装修合同呢？装修过程中装修企业内部的质检是自己监督自己，运动员兼作裁判员的监督机制消费者又会获得几层的知情权装修后如果装修企业自己出现重大问题，又怎么可能代理消方监理才能公正客观的处理装修中的问题，才能真正地保障业主的权益。</p></dd>
+                <dt><img src="../images/baodao_wenzhang2.jpg" alt=""></dt>
+                <dd><p>管家式监理不同于传统的监理，传统监理只负责工程质量的验收，装小蜜更关注装修的整体方案，除了监理工程质量之外帮助业主审核设计图纸，审核工程预算，跟踪工程进度，装修监理帮助业主审核装修方案和报价，防止高估冒算和中期无限度任意加项加价，使用户支付合理的装修价位提供资金托管及全程咨询服务等，全方位解决业主的装修烦恼。</p></dd>
+            </dl>
+            <span class="biaoqian">
+                <a><b>标签：</b>监理 家装 装小蜜</a>  <a class="right">刘家豪/编辑</a>
+            </span>
+            <table>
+                <tr><th colspan="3">&nbsp;&nbsp;&nbsp;评论：<strong>(12)</strong></th></tr>
+                <tr><td rowspan="3" class="userimg"><img src="../images/userimages.png" alt=""></td><td class="name">科飞侠</td><td class="gongju"><a class="remove">【删除】</a><a class="louceng">35F</a></td></tr>
+                <tr><td class="content" colspan="2">资质装修公司的初步评测不高于三家装修公司实地选择合适的装修公司工艺评测服务工艺评测服务帮您从源头把关选择合适的装修公司！</td></tr>
+                <tr><td>45分钟前</td><td><span class="xinxi"><img src="../images/xinxi1.png"></span><span class="zang"><img src="../images/zang1.png"><a>125</a></span></td></tr>
+            </table>
+            <table>
+                <tr><td rowspan="3" class="userimg"><img src="../images/userimages.png" alt=""></td><td class="name">包工头、小杜</td><td class="gongju"><a class="louceng">34F</a></td></tr>
+                <tr><td class="content" colspan="2">资质装修公司的初步评测不高于三家装修公司实地选择合适的装修公司工艺评测服务工艺评测服务帮您从源头把关选择合适的装修公司！</td></tr>
+                <tr><td>45分钟前</td><td><span class="xinxi"><img src="../images/xinxi1.png"></span><span class="zang"><img src="../images/zang1.png"><a>205</a></span></td></tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2" class="last">
+                        <table class="huifu">
+                            <tr><td class="name">老詹回复包工头、小杜：</td><td class="gongju"><a class="louceng">33F</a></td></tr>
+                            <tr><td class="content" colspan="2">资质装修公司的初步评测不高于三家装修公司实地选择合适的装修公司工艺评测服务工艺评测服务帮您从源头把关选择合适的装修公司！</td></tr>
+                            <tr><td>45分钟前</td><td><span class="xinxi"><img src="../images/xinxi1.png"></span><span class="zang"><img src="../images/zang1.png"><a>112</a></span></td></tr>
+                        </table>
+                        <table class="huifu">
+                            <tr><td class="name">有、小帅回复老詹：</td><td class="gongju"><a class="louceng">33F</a></td></tr>
+                            <tr><td class="content" colspan="2">资质装修公司的初步评测不高于三家装修公司实地选择合适的装修公司工艺评测服务工艺评测服务帮您从源头把关选择合适的装修公司！</td></tr>
+                            <tr><td>45分钟前</td><td><span class="xinxi"><img src="../images/xinxi1.png"></span><span class="zang"><img src="../images/zang1.png"><a>112</a></span></td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table class="last">
+                <tr><td rowspan="3" class="userimg"><img src="../images/userimages.png" alt=""></td><td class="name">校花</td><td class="gongju"><a class="louceng">33F</a></td></tr>
+                <tr><td class="content" colspan="2">资质装修公司的初步评测不高于三家装修公司实地选择合适的装修公司工艺评测服务工艺评测服务帮您从源头把关选择合适的装修公司！</td></tr>
+                <tr><td>45分钟前</td><td><span class="xinxi"><img src="../images/xinxi1.png"></span><span class="zang"><img src="../images/zang1.png"><a>112</a></span></td></tr>
+            </table>
+            <div class="foo" style="display:block;">
+                    <a href="login.html">登陆</a> <a>|</a> <a href="zhuce.html">注册</a><span class="foo_right" onclick="pinglun()"><img src="../images/pinglun.jpg">&nbsp;&nbsp;<a>写评论</a></span>
+            </div>
+            <div class="text" style="display:none;">
+                    <textarea style="border-radius: 5px;border: none;width: 100%;height: 3rem;font-size: 0.24rem;">
+                    </textarea>
+                    <button type="button" onclick="pinglun()">评论</button><a>还可以输入<strong>500</strong>个字符</a>
+            </div>
+        </div>
+        <!-- centent end -->
+    </div>
+</body>
+</html>
