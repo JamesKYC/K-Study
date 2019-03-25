@@ -1,0 +1,17 @@
+当给a标签设置为inline-block后行高居中没作用
+	解决办法：给元素设置vertical-align: middle;
+
+给button（form里面）添加js链接时不能跳转至对应链接地址
+	解决办法：对其指定type为button
+
+设有一定宽高的input和button中，button写有文字时两标签可以共存一行，当去掉button文字时input会下降一定距离
+	解决办法：对button设置浮动
+
+button元素用margin对其设置居中效果无效
+	解决办法：将button设置为block，或者直接在其父元素内设置文本居中（text-align：center）【因为button是inline-block元素，也就是内联块，所以只能用文本居中的方式将其居中，又或者将其转为块元素在用外边距margin居中】
+
+css鼠标经过对其兄弟元素无效
+	解决办法：将其要设置鼠标经过的元素设置为第一个兄弟元素即可【css的选择符只能是从父到子，从上到下的顺序，也无法根据子元素的状态来改变祖先元素】
+
+JS给多个标签循环赋值函数时无法找到相应对象并赋予效果
+	解决办法：可以在循环标签for循环时对其index属性赋予下标值XXX[i].index = i，在需要用到该标签时用this.index调出其下标值找到对象

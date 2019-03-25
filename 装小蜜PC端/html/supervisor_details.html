@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>监理案例详情</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        img{
+            float: left;
+        }
+        .center{
+            margin: 0 auto;
+            background-color: #E9E9E9;
+        }
+            .center p{
+                line-height: 37px;
+                font-size: 12px;
+                color: #5a5a5a;
+            }
+            .details_left,.left_content{
+                float: left;
+            }
+                .left_content{
+                    padding-left: 20px;
+                    padding-right: 24px;
+                    height: 300px;
+                    background-color: #2C2C2C;
+                }
+                    .left_content h3{
+                        line-height: 84px;
+                        font-size: 24px;
+                        color: #ffa751;
+                        background: url(../images/ywg.jpg) no-repeat right center;
+                    }
+                    .left_content p{
+                        line-height: 32px;
+                        font-size: 14px;
+                        color: #a4a4a4;
+
+                    }
+                    .left_content strong{
+                        color: #dbdbdb;
+                    }
+            .details_right{
+                float: right;
+                box-sizing: border-box;
+                padding: 165px 57px 0;
+                height: 300px;
+                background: #FFA751 url(../images/teacher_img.png) no-repeat center 23px;
+            }
+                .details_right p{
+                    line-height: 24px;
+                    font-size: 14px;
+                    color: #40332c;
+                }
+            .center_details{
+                float: left;
+                width: 1100px;
+                /* background-color: #fff; */
+            }
+            .details_data{
+                margin-bottom: 12px;
+                padding: 23px 23px 23px;
+                background-color: #fff;
+            }
+                .center_details h3{
+                    padding-left: 20px;
+                    text-indent: 2em;
+                    line-height: 78px;
+                    font-size: 24px;
+                    color: #fff;
+                    background: #3A3A3A url(../images/title_left.jpg) repeat-y left top;
+                }
+                    .center_details h3 a{
+                        padding: 0 0 0 24px;
+                        font-size: 14px;
+                        color: #a4a4a4;
+                    }
+            .center_details dl{
+                float: left;
+                margin-bottom: 24px;
+                width: 786px;
+            }
+            .center_details .four{
+                width: 100%;
+            }
+            .center_details .all{
+                width: 250px;
+            }
+                .center_details dl dd{
+                    float: left;
+                    margin: 1px 18px 1px 0;
+                    border: 1px solid #f0f0f0;
+                    width: 248px;
+                    height: 33px;
+                    text-indent: 1.2em;
+                    line-height: 33px;
+                    font-size: 12px;
+                    color: #5a5a5a;
+                    background-color: #F0F0F0;
+                }
+                    .center_details dl.three dd:nth-of-type(3n){
+                        margin-right: 0;
+                    }
+                    .center_details dl.four dd:nth-of-type(4n){
+                        margin-right: 0;
+                    }
+                    .center_details dd span{
+                        float: right;
+                        width: 61px;
+                        height: 33px;
+                        background-color: #fff;
+                    }
+                    .center_details dd.title span{
+                        width: 171px;
+                    }
+                    span.yes{
+                        background: url(../images/title_yess.jpg) no-repeat center center;
+                    }
+                    span.img{
+                        background: url(../images/title_imgs.jpg) no-repeat center center;
+                    }
+                    span.three{
+                        background: url(../images/title_threes.jpg) no-repeat center center;
+                    }
+                    .center_details dt p,li p{
+                        margin-bottom: 1px;
+                        padding:0 1.5em;
+                        line-height: 38px;
+                        font-size: 14px;
+                        color: #787878;
+                        background-color: #DDDDDD;
+                    }
+                        .center_details dt p strong{
+                            float: right;
+                            font-size: 12px;
+                            color: #787878;
+                        }
+                        .center_details dt p strong a{
+                            color: #5a5a5a;
+                        }
+                dl.all{margin-right: 18px;}
+                dl.all:nth-of-type(4n){margin-right: 0;}
+                    dl.all dt p{
+                        text-align: center;
+                        font-weight: bold;
+                    }
+            .center_details .zhuyi{
+                float: right;
+                width: 266px;
+            }
+                .zhuyi li{
+                    float: left;
+                    width: 100%;
+                }
+                .zhuyi li:nth-of-type(1){
+                    margin-bottom: 14px;
+                }
+                .zhuyi p{
+                    margin-bottom: 0;
+                    line-height: 38px;
+                    text-align: center;
+                }
+                .zhuyi a{
+                    display: block;
+                    text-indent: 2em;
+                    line-height: 26px;
+                    font-size: 12px;
+                    color: #5a5a5a;
+                    background: url(../images/details_dian.jpg) no-repeat 1.2em center;
+                }
+                table.bianhao th{
+                    border-left: 1px solid #D4D4D4;
+                    border-right: 1px solid #D4D4D4;
+                    text-align: center;
+                    line-height: 38px;
+                    font-size: 14px;
+                    color: #787878;
+                    background-color: #DDDDDD;
+                }
+                table.bianhao td{
+                    border: 1px solid #D4D4D4;
+                    border-top: none;
+                    text-indent: 1.3em;
+                    line-height: 38px;
+                    font-size: 12px;
+                    color: #5a5a5a;
+                }
+                table.bianhao td.font_center{
+                    text-indent: 0;
+                    text-align: center;
+                }
+            table.final{
+                float: left;
+                width: 517px;
+            }
+                table.final td,table.final th{
+                    padding: 0;
+                    width: 171px;
+                    text-align: center;
+                    text-indent: 0;
+                }
+                table.final th{
+                    border: 1px solid #D4D4D4;
+                    background-color: #F0F0F0;
+                }
+            .details_data .details_right{
+                float: left;
+                margin: 0 14px;
+                padding-left: 38px;
+                padding-right: 38px;
+                padding-bottom: 32px;
+                width: 323px;
+                height: auto;
+            }
+                .details_data .details_right p{
+                    text-align: center;
+                    font-size: 13px;
+                    color: #fff;
+                }
+                .details_data .details_right p:last-child{
+                    margin-top: 17px;
+                    text-align: left;
+                } 
+        div.anlis{
+            padding: 26px 0 35px;
+            width: 100%;
+            background-color: #3A3A3A;
+        }
+            div.anli_href{
+                margin: 0 auto;
+                width: 1100px;
+            }
+                div.anli_href img{
+                    float: left;
+                    margin-right: 28px;
+                }
+
+
+                
+        .pinlun{
+            margin:22px auto 22px;
+            width: 1100px;
+        }
+            .pinlun_content{
+                padding: 0 25px;
+                background-color: #fff;
+            }
+                .pinlun_content h3{
+                    padding-left: 0;
+                    text-indent: 0;
+                    font-size: 21px;
+                    line-height: 55px;
+                    color:#000;
+                    background: none;
+                }
+                    .pinlun_content h3 strong{
+                        font-size: 14px;
+                        color: #ff7200;
+                    }
+                .pinlun_content span{
+                    display: block;
+                    padding: 40px 0 24px 0;
+                    border: 1px solid #E1E1E1;
+                    text-align: center;
+                    background-color: #F2F2F2;
+                }
+                    .pinlun_content span p{
+                        font-size: 14px;
+                        color: #4c4c4c;
+                    }
+                    .pinlun_content span button{
+                        margin: 16px 7px 0;
+                        border: none;
+                        border-radius: 3px;
+                        width: 54px;
+                        height: 31px;
+                        font-size: 14px;
+                        color: #fff;
+                        background-color: #FFA751;
+                    }
+                    .pinlun_content span button + button{
+                        border: 1px solid #FFA751;
+                        color: #FFA751;
+                        background-color: rgba(0, 0, 0,0);
+                    }
+                .pinlun_content span + span{
+                    padding: 0;
+                    border: none;
+                    height: 70px;
+                    text-align: left;
+                    font-size: 12px;
+                    line-height: 55px;
+                    background: none;
+                }
+                    .pinlun_content span a{
+                        color: #5b5b5b;
+                    }
+                    .pinlun_content span + span button{
+                        float: right;
+                        margin: 10px 0 0 15px;
+                        width: 152px;
+                    }
+            div.pinlun table{
+                border-top: 1px solid #E9E9E9;
+                width: 100%;
+                font-size: 12px;
+                color: #595959;
+                background-color: #F9F9F9;
+            }
+            div.pinlun table td{
+                padding-right: 35px;
+            }
+            div.pinlun table td.userimg{
+                padding: 26px 16px 0 26px;
+                box-sizing: border-box;
+                width: 60px;
+                vertical-align: top;
+            }
+            div.pinlun table .content{
+                padding-top: 12px;
+                padding-bottom: 12px;
+                color: #595959;
+            }
+            .userimg img{
+                float: left;
+                width: 60px;
+                height: 60px;
+            }
+            .name,.gongju{
+                padding-top: 29px;
+            }
+            .three td{
+                padding-bottom: 22px;
+            }
+            .huifu .three td{
+                padding-bottom: 12px;
+            }
+            .huifu .name,.huifu .gongju{
+                padding-top: 15px;
+            }
+            .louceng,.centent .zang a{
+                color: #fe7200;
+            }
+            .louceng,.zang,.xinxi{
+                float: right;
+                text-decoration: none;
+                background: none;
+            }
+            .xinxi{
+                color: #FF7200;
+            }
+            div.pinlun table.huifu{
+                width: 97%;
+                border: 1px solid #E6E6E6;
+                background-color: #FFFFFF;
+            }
+            .huifu:last-child{
+                margin-bottom: 22px;
+            }
+            .huifu td{
+                padding-left: 15px;
+                padding-right: 20px;
+            }
+            .huifu .name,.huifu .gongju{
+                padding-top: 15px;
+            }
+            .huifu .content{
+                padding-top: 8px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="scroll">
+            <a href="#" style="background: url(../images/scroll_rocket.png) no-repeat center center;margin-bottom: 10px;"></a>
+            <a class="QR_Code" style="background: url(../images/scroll_QRCode.png) no-repeat center center;"><img src="../images/QR_Code.jpg" alt=""></a>
+        </div>
+        <div class="head clearfix">
+            <div class="top">
+                <a href="../index.html"></a>
+                <span class="span_self">监理服务</span>
+                <span>工地直播</span>
+                <span>论坛</span>
+                <button onclick="location.href='login.html'">登陆</button>
+                <button onclick="location.href='register.html'">注册</button>
+            </div>
+            
+        </div>
+
+        <div class="center clearfix">
+            <p>首页 > 监理案例 > 北京麒麟瑞景别墅 </p>
+            <div class="details_left">
+                <img src="../images/details_home.jpg">
+                <div class="left_content">
+                    <h3>北京麒麟瑞景别墅</h3>
+                    <p>面积：<strong>135m2</strong></p>
+                    <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                    <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                    <p>业主：<strong>李女士</strong></p>
+                    <p>工长：<strong>张元培</strong></p>
+                    <p>工程评价：<img src="../images/score_xingxing.jpg" style="float:none;vertical-align: middle;"><strong style="color: #ffa751;">8.6分&nbsp;&nbsp;</strong><a href="#" style="text-decoration:underline;color: #ffa751;">详情></a></p>
+                </div>
+            </div>
+            <div class="details_right">
+                <p style="margin-bottom: 12px;text-align: center;"><strong style="font-size: 18px;">林云朗</strong>&nbsp;监理</p>
+                <p>监理级别：<img style="float: none;vertical-align: top;" src="../images/black_xingxing.jpg"></p>
+                <p>持证：监理工程师</p>
+                <p>从业：10年以上</p>
+            </div>
+            <img src="../images/details_jindu.jpg" style="float: left;margin: 12px auto;">
+            <div class="center_details">
+                <h3>前期审核<a>审核2项，存在问题1项。</a><span style="float: right;"><a style="margin-right: 20px;">一 无内容</a><a style="margin-right: 20px;background:url(../images/title_yes.jpg) no-repeat left center;">合格项</a><a style="margin-right: 20px;background:url(../images/title_img.jpg) no-repeat left center;">图片项</a><a style="margin-right: 35px;background:url(../images/title_three.jpg) no-repeat left center;">问题项</a></span></h3>
+                <div class="details_data clearfix">
+                    <dl class="three">
+                        <dt><p>预算审核<strong>审核执行标准：装小蜜北京地区2015年预算审核标准 <b>[<a href="#">下载</a>]</b></strong></p></dt>
+                        <dd class="title">审核人<span>周树人</span></dd>
+                        <dd>单价属于合理范围<span class="yes"></span></dd>
+                        <dd>无重复工艺<span class="img"></span></dd>
+                        <dd class="title">审核时间<span>2015.03.15</span></dd>
+                        <dd>单价属于合理范围<span class="img"></span></dd>
+                        <dd>无重复收费<span class="img"></span></dd>
+                        <dd class="title">审核数量<span>共审核3份报价216项</span></dd>
+                        <dd>单价属于合理范围<span class="img"></span></dd>
+                        <dd>无重复收费<span class="img"></span></dd>
+                        <dd class="title">审核文件<span>[ 审核文件下载 ]</span></dd>
+                        <dd>单价属于合理范围<span class="img"></span></dd>
+                        <dd>无重复收费<span class="img"></span></dd>
+                    </dl>
+                    <ul class="zhuyi">
+                        <li><p>注意事项</p></li>
+                        <li><a>外径在25mm以管道在转表笼头处管道牢固。</a></li>
+                        <li><a>外径在25mm以管道在转表笼头处管道牢固。</a></li>
+                        <li><a>外径在25mm以管道在转表笼头处管道牢固。</a></li>
+                        <li><a>外径在25mm以管道在转表笼头处管道牢固。</a></li>
+                        <li><a>外径在25mm以管道在转表笼头处管道牢固。</a></li>
+                    </ul>
+                    <dl class="three" style="margin-bottom:0;">
+                        <dt><p>预算审核<strong>审核执行标准：装小蜜北京地区2015年预算审核标准 <b>[<a href="#">下载</a>]</b></strong></p></dt>
+                        <dd class="title">审核人<span>周树人</span></dd>
+                        <dd>单价属于合理范围<span class="yes"></span></dd>
+                        <dd>无重复工艺<span class="yes"></span></dd>
+                        <dd class="title">审核时间<span>2015.03.15</span></dd>
+                        <dd>单价属于合理范围<span class="img"></span></dd>
+                        <dd>无重复收费<span class="yes"></span></dd>
+                        <dd class="title">审核数量<span>共审核3份报价216项</span></dd>
+                        <dd>单价属于合理范围<span class="img"></span></dd>
+                        <dd>无重复收费<span class="img"></span></dd>
+                        <dd class="title">审核文件<span>[ 审核文件下载 ]</span></dd>
+                        <dd>单价属于合理范围<span class="three"></span></dd>
+                        <dd>无重复收费<span class="img"></span></dd>
+                    </dl>
+                    <ul class="zhuyi">
+                        <li><p>注意事项</p></li>
+                        <li><a>外径在25mm以管道在转表笼头处管道牢固。</a></li>
+                        <li><a>外径在25mm以管道在转表笼头处管道牢固。</a></li>
+                        <li><a>外径在25mm以管道在转表笼头处管道牢固。</a></li>
+                        <li><a>外径在25mm以管道在转表笼头处管道牢固。</a></li>
+                        <li><a>外径在25mm以管道在转表笼头处管道牢固。</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="center_details">
+                    <h3>工程交底<a>审核2项，存在问题1项。</a><span style="float: right;"><a style="margin-right: 20px;">一 无内容</a><a style="margin-right: 20px;background:url(../images/title_yes.jpg) no-repeat left center;">合格项</a><a style="margin-right: 20px;background:url(../images/title_img.jpg) no-repeat left center;">图片项</a><a style="margin-right: 35px;background:url(../images/title_three.jpg) no-repeat left center;">问题项</a></span></h3>
+                    <div class="details_data clearfix">
+                        <dl class="four">
+                            <dd>单价属于合理范围<span class="yes"></span></dd>
+                            <dd>无重复工艺<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                        </dl>
+                        <table class="bianhao">
+                            <tr><th style="width: 56px;">编号</th><th style="width: 179px;">编号</th><th style="width: 282px;">编号</th><th style="width: 100px;">编号</th><th style="width: 100px;">编号</th><th style="width: 330px;">编号</th></tr>
+                            <tr><td style="background: url(../images/wenti_one.jpg) no-repeat center center;"></td><td>弱点导线存在问题</td><td>弱点导线风口出现异常需调整（图）</td><td class="font_center">2015.03.21</td><td class="font_center">2015.03.23</td><td>问题已解决，弱点导线通畅。（图）</td></tr>
+                            <tr><td style="background: url(../images/wenti_two.jpg) no-repeat center center;"></td><td>弱点导线存在问题</td><td>弱点导线风口出现异常需调整（图）</td><td class="font_center">2015.03.21</td><td class="font_center">2015.03.23</td><td>问题已解决，弱点导线通畅。（图）</td></tr>
+                        </table>
+    
+                    </div>
+                </div>
+                <div class="center_details">
+                    <h3>隐蔽工程<a>审核2项，存在问题1项。</a><span style="float: right;"><a style="margin-right: 20px;">一 无内容</a><a style="margin-right: 20px;background:url(../images/title_yes.jpg) no-repeat left center;">合格项</a><a style="margin-right: 20px;background:url(../images/title_img.jpg) no-repeat left center;">图片项</a><a style="margin-right: 35px;background:url(../images/title_three.jpg) no-repeat left center;">问题项</a></span></h3>
+                    <div class="details_data clearfix">
+                        <dl class="all">
+                            <dt><p>电路改造</p></dt>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                        </dl>
+                        <dl class="all">
+                            <dt><p>水路改造</p></dt>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                        </dl>
+                        <dl class="all">
+                            <dt><p>隐蔽工程验收</p></dt>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                        </dl>
+                        <dl class="all">
+                            <dt><p>拆除及新建项目</p></dt>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                        </dl>
+                        <table class="bianhao">
+                            <tr><th style="width: 56px;">编号</th><th style="width: 179px;">编号</th><th style="width: 282px;">编号</th><th style="width: 100px;">编号</th><th style="width: 100px;">编号</th><th style="width: 330px;">编号</th></tr>
+                            <tr><td style="background: url(../images/wenti_one.jpg) no-repeat center center;"></td><td>弱点导线存在问题</td><td>弱点导线风口出现异常需调整（图）</td><td class="font_center">2015.03.21</td><td class="font_center">2015.03.23</td><td>问题已解决，弱点导线通畅。（图）</td></tr>
+                            <tr><td style="background: url(../images/wenti_two.jpg) no-repeat center center;"></td><td>弱点导线存在问题</td><td>弱点导线风口出现异常需调整（图）</td><td class="font_center">2015.03.21</td><td class="font_center">2015.03.23</td><td>问题已解决，弱点导线通畅。（图）</td></tr>
+                        </table>
+    
+                    </div>
+                </div>
+                <div class="center_details">
+                    <h3>隐蔽工程<a>审核2项，存在问题1项。</a><span style="float: right;"><a style="margin-right: 20px;">一 无内容</a><a style="margin-right: 20px;background:url(../images/title_yes.jpg) no-repeat left center;">合格项</a><a style="margin-right: 20px;background:url(../images/title_img.jpg) no-repeat left center;">图片项</a><a style="margin-right: 35px;background:url(../images/title_three.jpg) no-repeat left center;">问题项</a></span></h3>
+                    <div class="details_data clearfix">
+                        <dl class="all">
+                            <dt><p>电路改造</p></dt>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                        </dl>
+                        <dl class="all">
+                            <dt><p>电路改造</p></dt>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                        </dl>
+                        <dl class="all">
+                            <dt><p>电路改造</p></dt>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                        </dl>
+                        <dl class="all">
+                            <dt><p>电路改造</p></dt>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复工艺<span class="three"></span></dd>
+                            <dd>审核人<span class="yes"></span></dd>
+                        </dl>
+                        <table class="bianhao">
+                            <tr><th style="width: 56px;">编号</th><th style="width: 179px;">编号</th><th style="width: 282px;">编号</th><th style="width: 100px;">编号</th><th style="width: 100px;">编号</th><th style="width: 330px;">编号</th></tr>
+                            <tr><td style="background: url(../images/wenti_one.jpg) no-repeat center center;"></td><td>弱点导线存在问题</td><td>弱点导线风口出现异常需调整（图）</td><td class="font_center">2015.03.21</td><td class="font_center">2015.03.23</td><td>问题已解决，弱点导线通畅。（图）</td></tr>
+                            <tr><td style="background: url(../images/wenti_two.jpg) no-repeat center center;"></td><td>弱点导线存在问题</td><td>弱点导线风口出现异常需调整（图）</td><td class="font_center">2015.03.21</td><td class="font_center">2015.03.23</td><td>问题已解决，弱点导线通畅。（图）</td></tr>
+                        </table>
+    
+                    </div>
+                </div>
+                <div class="center_details">
+                    <h3>竣工验收<a>审核2项，存在问题1项。</a><span style="float: right;"><a style="margin-right: 20px;">一 无内容</a><a style="margin-right: 20px;background:url(../images/title_yes.jpg) no-repeat left center;">合格项</a><a style="margin-right: 20px;background:url(../images/title_img.jpg) no-repeat left center;">图片项</a><a style="margin-right: 35px;background:url(../images/title_three.jpg) no-repeat left center;">问题项</a></span></h3>
+                    <div class="details_data clearfix">
+                        <dl class="four">
+                            <dd>单价属于合理范围<span class="yes"></span></dd>
+                            <dd>无重复工艺<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                            <dd>单价属于合理范围<span class="img"></span></dd>
+                            <dd>无重复收费<span class="img"></span></dd>
+                        </dl>
+                        <table class="bianhao">
+                            <tr><th style="width: 56px;">编号</th><th style="width: 179px;">编号</th><th style="width: 282px;">编号</th><th style="width: 100px;">编号</th><th style="width: 100px;">编号</th><th style="width: 330px;">编号</th></tr>
+                            <tr><td style="background: url(../images/wenti_one.jpg) no-repeat center center;"></td><td>弱点导线存在问题</td><td>弱点导线风口出现异常需调整（图）</td><td class="font_center">2015.03.21</td><td class="font_center">2015.03.23</td><td>问题已解决，弱点导线通畅。（图）</td></tr>
+                            <tr><td style="background: url(../images/wenti_two.jpg) no-repeat center center;"></td><td>弱点导线存在问题</td><td>弱点导线风口出现异常需调整（图）</td><td class="font_center">2015.03.21</td><td class="font_center">2015.03.23</td><td>问题已解决，弱点导线通畅。（图）</td></tr>
+                        </table>
+    
+                    </div>
+                </div>
+                <div class="center_details">
+                    <h3>材料验收及变更项目<a>审核2项，存在问题1项。</a><span style="float: right;"><a style="margin-right: 20px;">一 无内容</a><a style="margin-right: 20px;background:url(../images/title_yes.jpg) no-repeat left center;">合格项</a><a style="margin-right: 20px;background:url(../images/title_img.jpg) no-repeat left center;">图片项</a><a style="margin-right: 35px;background:url(../images/title_three.jpg) no-repeat left center;">问题项</a></span></h3>
+                    <div class="details_data clearfix">
+                        <p style="float: left;margin-bottom: 2px;width: 517px;text-align: center;line-height: 38px;font-size: 14px;color: #787878;background-color: #DDDDDD;"><b>材料验收</b></p>
+                        <p style="float: right;margin-bottom: 2px;width: 517px;text-align: center;line-height: 38px;font-size: 14px;color: #787878;background-color: #DDDDDD;"><b>变更项目</b></p>
+                        <table class="final bianhao">
+                            <tr><th>材料名称</th><th>品牌名称</th><th>验收结果</th></tr>
+                            <tr><td>零线安装是否安全</td><td>欧利亚家饰</td><td class="font_center">零线安装的符合要求（图）</td></tr>
+                            <tr><td>零线安装是否安全</td><td>欧利亚家饰</td><td class="font_center">零线安装的符合要求（图）</td></tr>
+                            <tr><td>零线安装是否安全</td><td>欧利亚家饰</td><td class="font_center">零线安装的符合要求（图）</td></tr>
+                        </table>
+                        <table class="final bianhao" style="float: right;">
+                            <tr><th>变更项目</th><th>变更工期</th><th>变更内容</th></tr>
+                            <tr><td>零线安装是否安全</td><td>2015.03.28</td><td class="font_center">零线安装的符合要求（图）</td></tr>
+                            <tr><td>零线安装是否安全</td><td>2015.03.28</td><td class="font_center">零线安装的符合要求（图）</td></tr>
+                            <tr><td>零线安装是否安全</td><td>2015.03.28</td><td class="font_center">零线安装的符合要求（图）</td></tr>
+                        </table>
+    
+                    </div>
+                </div>
+                <div class="center_details">
+                    <h3>材料验收及变更项目<a>审核2项，存在问题1项。</a><span style="float: right;"><a style="margin-right: 20px;">一 无内容</a><a style="margin-right: 20px;background:url(../images/title_yes.jpg) no-repeat left center;">合格项</a><a style="margin-right: 20px;background:url(../images/title_img.jpg) no-repeat left center;">图片项</a><a style="margin-right: 35px;background:url(../images/title_three.jpg) no-repeat left center;">问题项</a></span></h3>
+                    <div class="details_data clearfix">
+                        <div class="details_right" style="background: #FF6969 url(../images/teacher_img.png) no-repeat center 23px;">
+                            <p style="margin-bottom: 12px;text-align: center;"><strong style="font-size: 18px;">林云朗</strong>&nbsp;监理</p>
+                            <p>监理级别：<img style="float: none;vertical-align: top;" src="../images/write_xingxing.png">8.2分</p>
+                            <p>传统的监理管家式监理不同于，传统监理只负责工程质量的验收，装小蜜更关注装修的整体除监协助业主筛选施工方程内质量。</p>
+                        </div>
+                        <div class="details_right" style="background: #FDB45E url(../images/teacher_img.png) no-repeat center 23px;">
+                            <p style="margin-bottom: 12px;text-align: center;"><strong style="font-size: 18px;">林云朗</strong>&nbsp;监理</p>
+                            <p>监理级别：<img style="float: none;vertical-align: top;" src="../images/write_xingxing.png">9.5分</p>
+                            <p>传统的监理管家式监理不同于，传统监理只负责工程质量的验收，装小蜜更关注装修的整体除监协助业主筛选施工方程内质量。</p>
+                        </div>
+                        <div class="details_right" style="background: #65C99D url(../images/teacher_img.png) no-repeat center 23px;">
+                            <p style="margin-bottom: 12px;text-align: center;"><strong style="font-size: 18px;">林云朗</strong>&nbsp;监理</p>
+                            <p>监理级别：<img style="float: none;vertical-align: top;" src="../images/write_xingxing.png">8.6分</p>
+                            <p>传统的监理管家式监理不同于，传统监理只负责工程质量的验收，装小蜜更关注装修的整体除监协助业主筛选施工方程内质量。</p>
+                        </div>
+                    </div>
+
+
+                    <div class="pinlun">
+                        <div class="pinlun_content">
+                            <h3>评论<strong>（24）</strong></h3>
+                            <span>
+                                <p>只需5秒注册后就能评论了</p>
+                                <button onclick="location.href='login.html'">注册</button>
+                                <button onclick="location.href='register.html'">登陆</button>
+                            </span>
+                            <span>
+                                <input type="checkbox" name="" id=""><a>同时推荐此文</a>
+                                <button>评论</button><a style="float: right;">还可以输入 <strong style="color: #ff7200;">2000</strong> 个字符</a>
+                            </span>
+                        </div>
+                        <table>
+                            <tr><td rowspan="3" class="userimg"><img src="../images/teacher_img.png" alt=""></td><td class="name">科飞侠</td><td class="gongju"><a class="louceng">35F</a></td></tr>
+                            <tr><td class="content" colspan="2">装修公司实地工艺评测服务帮您从源头把关选择合适的装修公司装小蜜的提供不高于10家，资质装修公司的初步评测不高于3家装修公司实地选择合适的装修公司工艺评测服务装修公司
+                                    实地工艺评测服务帮您从源头把关选择合适的装修公司装合适的装修工艺评测服务。</td></tr>
+                            <tr class="three"><td>45分钟前</td><td><span class="zang">|&nbsp;&nbsp;回复</span><span class="xinxi">赞（9）</span></td></tr>
+                        </table>
+                        <table>
+                            <tr><td rowspan="3" class="userimg"><img src="../images/teacher_img.png" alt=""></td><td class="name">包工头、小杜</td><td class="gongju"><a class="louceng">34F</a></td></tr>
+                            <tr><td class="content" colspan="2">装修公司实地工艺评测服务帮您从源头把关选择合适的装修公司装小蜜的提供不高于10家，资质装修公司的初步评测不高于3家装修公司实地选择合适的装修公司工艺评测服务装修公司
+                                    实地工艺评测服务帮您从源头把关选择合适的装修公司装合适的装修工艺评测服务。</td></tr>
+                                    <tr class="three"><td>45分钟前</td><td><span class="zang">|&nbsp;&nbsp;回复</span><span class="xinxi">赞（9）</span></td></tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2" class="last" style="padding-left: 0px;padding-right: 0px;">
+                                    <table class="huifu">
+                                        <tr><td class="name">老詹回复包工头、小杜：</td><td class="gongju"><a class="louceng">33F</a></td></tr>
+                                        <tr><td class="content" colspan="2">装修公司实地工艺评测服务帮您从源头把关选择合适的装修公司装小蜜的提供不高于10家，资质装修公司的初步评测不高于3家装修公司实地选择合适的装修公司工艺评测服务装修公司
+                                                实地工艺评测服务帮您从源头把关选择合适的装修公司装合适的装修工艺评测服务。</td></tr>
+                                                <tr class="three"><td>45分钟前</td><td><span class="zang">|&nbsp;&nbsp;回复</span><span class="xinxi">赞（9）</span></td></tr>
+                                    </table>
+                                    <table class="huifu">
+                                        <tr><td class="name">有、小帅回复老詹：</td><td class="gongju"><a class="louceng">33F</a></td></tr>
+                                        <tr><td class="content" colspan="2">装修公司实地工艺评测服务帮您从源头把关选择合适的装修公司装小蜜的提供不高于10家，资质装修公司的初步评测不高于3家装修公司实地选择合适的装修公司工艺评测服务装修公司
+                                                实地工艺评测服务帮您从源头把关选择合适的装修公司装合适的装修工艺评测服务。</td></tr>
+                                                <tr class="three"><td>45分钟前</td><td><span class="zang">|&nbsp;&nbsp;回复</span><span class="xinxi">赞（9）</span></td></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="last">
+                            <tr><td rowspan="3" class="userimg"><img src="../images/teacher_img.png" alt=""></td><td class="name">校花</td><td class="gongju"><a class="louceng">33F</a></td></tr>
+                            <tr><td class="content" colspan="2">装修公司实地工艺评测服务帮您从源头把关选择合适的装修公司装小蜜的提供不高于10家，资质装修公司的初步评测不高于3家装修公司实地选择合适的装修公司工艺评测服务装修公司
+                                    实地工艺评测服务帮您从源头把关选择合适的装修公司装合适的装修工艺评测服务。</td></tr>
+                                    <tr class="three"><td>45分钟前</td><td><span class="zang">|&nbsp;&nbsp;回复</span><span class="xinxi">赞（9）</span></td></tr>
+                        </table>
+                    </div>
+
+
+                </div>
+        </div>
+    </div>
+    <div class="anlis">
+        <div class="anli_href clearfix">
+            <img src="../images/details_anli1.jpg" onclick="location.href='supervisor_details.html'">
+            <img src="../images/details_anli2.jpg" onclick="location.href='supervisor_details.html'">
+            <img src="../images/details_anli3.jpg" onclick="location.href='supervisor_details.html'">
+            <img src="../images/details_anli4.jpg" style="margin-right: 0;" onclick="location.href='supervisor_details.html'">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_content">
+            <p>装小蜜家装监理-管家式家装监理</p>
+            <p>北京朝阳区SOHO现代城6号楼505室</p>
+            <p>装小蜜投诉邮箱：ceo@ zhuangxiaomi.com</p>
+            <p>© 2015 ZHUANGXIAOMI.COM     京ICP备13026313号</p>
+        </div>
+    </div>
+</body>
+</html>

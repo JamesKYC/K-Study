@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>监理案例</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .container{background-color: #E9E9E9;}
+        div.bottom{
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 262px;
+            background-color: #3A3A3A;
+            transition: height,2s;
+        }
+        div.no{
+            overflow: hidden;
+            height: 0px;
+            transition: height,2s;
+        }
+        .head input{
+            position:absolute;
+            top: 100%;
+            left: 50%;
+            margin-top: -19px;
+            margin-left: -66px;
+            border: none;
+            border-radius: 2px;
+            width: 112px;
+            height: 38px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #FFA851;
+        }
+        div.bottom_content{
+            margin: 0 auto;
+            padding-top: 24px;
+            width: 1100px;
+            
+        }
+            div.bottom_content dl{
+                padding: 9px 0;
+                line-height: 24px;
+                font-size: 14px;
+                color:#9f9f9f;
+
+            }
+                div.bottom_content dt,div.bottom_content dd{float: left;}
+                div.bottom_content dt{
+                    margin-right: 16px;
+                    font-weight: bolder;
+                }
+                div.bottom_content dd{
+                    border-radius: 3px;
+                    padding: 0 12px;
+                }
+                div.bottom_content dd:hover{
+                    font-weight: bold;
+                    color: #41322b;
+                    background-color: #FFA851;
+                }
+                .color{
+                    font-weight: bold;
+                    color: #41322b;
+                    background-color: #FFA851;
+                }
+        .center{
+            line-height: 46px;
+            font-size: 14px;;
+            color: #5a5a5a;
+            background-color: #E9E9E9;
+        }
+            .center li{
+                position: relative;
+                float: left;
+                margin: 0 29px 28px 0;
+                cursor: pointer;
+                list-style: none;
+            }
+            .center li:nth-of-type(4n){
+                margin-right: 0;
+            }
+            .center li:hover span{
+                /* display:block; */
+                width: 282px;
+                transition: width 2s;
+            }
+            .center li span{
+                overflow: hidden;
+                /* display: none; */
+                position: absolute;
+                left: 100%;
+                z-index: 99;
+                float: left;
+                /* padding-left: 22px; */
+                /* padding-top: 10px; */
+                width: 0px;
+                height: 189px;
+                transition: width 2s;
+            }
+            .center li:nth-of-type(4n) span{
+                left: -282px;
+            }
+                .center li span div{
+                    padding-top: 10px;
+                    height: 189px;
+                    background-color: rgba(44,44,44,0.7);
+                    transition: alpha,2s;
+                }
+                .center li span div:hover{
+                    background-color: rgba(44,44,44,1);
+                    transition: alpha,2s;
+                }
+                .center li span h3{
+                    text-indent: 22px;
+                    line-height: 42px;
+                    font-size: 18px;
+                    color: #ffa751;
+                    background: url(../images/sgz.jpg) no-repeat 9.5em center;
+                }
+                .center li span p{
+                    text-indent: 22px;
+                    line-height: 21px;
+                    font-size: 12px;
+                    color: #a4a4a4;
+                }
+                .center li span p strong{
+                    color: #dbdbdb;
+                }
+                .center li img{
+                    float: left;
+                }
+                progress{
+                    width: 120px;
+                }
+    </style>
+    <script>
+        window.onload = function(){
+            var dd = document.getElementsByTagName("dd");
+            var anniu = document.getElementsByClassName("bottom_anniu")[0];
+            var bottom = document.getElementsByClassName("bottom")[0];
+            for(var i = 0;i < dd.length;i++){
+                dd[i].index = i;
+                dd[i].onclick = function(){
+                    if(this.className == ""){
+                        this.className = "color";
+                    }else{
+                        this.className = "";
+                    }
+                }
+            }
+            anniu.onclick = function(){
+                if(bottom.className == "bottom"){
+                    bottom.className = "bottom no";
+                    anniu.value = "打开分类";
+                }else{
+                    bottom.className = "bottom";
+                    anniu.value = "收起分类";
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="scroll">
+            <a href="#" style="background: url(../images/scroll_rocket.png) no-repeat center center;margin-bottom: 10px;"></a>
+            <a class="QR_Code" style="background: url(../images/scroll_QRCode.png) no-repeat center center;"><img src="../images/QR_Code.jpg" alt=""></a>
+        </div>
+        <div class="head clearfix">
+            <div class="top">
+                <a href="../index.html"></a>
+                <span class="span_self">监理服务</span>
+                <span>工地直播</span>
+                <span>论坛</span>
+                <button onclick="location.href='login.html'">登陆</button>
+                <button onclick="location.href='register.html'">注册</button>
+            </div>
+            <div class="bottom no">
+                <div class="bottom_content">
+                    <dl class="clearfix">
+                        <dt>区域划分</dt>
+                        <dd>全部</dd>
+                        <dd>东城区</dd>
+                        <dd>西城区</dd>
+                        <dd>朝阳区</dd>
+                        <dd>海淀区</dd>
+                        <dd>丰台区</dd>
+                        <dd>石景山区</dd>
+                        <dd>门头沟区</dd>
+                        <dd>房山区</dd>
+                        <dd>大兴区</dd>
+                        <dd>昌平区</dd>
+                        <dd>平谷区</dd>
+                        <dd>顺义区</dd>
+                        <dd>通州区</dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt>工地阶段</dt>
+                        <dd>全部</dd>
+                        <dd>施工中</dd>
+                        <dd>已完工</dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt>户型结构</dt>
+                        <dd>全部</dd>
+                        <dd>零居室</dd>
+                        <dd>一居室</dd>
+                        <dd>两居室</dd>
+                        <dd>三居室</dd>
+                        <dd>四居室以上</dd>
+                        <dd>别墅</dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt>装修预算</dt>
+                        <dd>全部</dd>
+                        <dd> 0-5万元</dd>
+                        <dd>5-10万元</dd>
+                        <dd>10-20万元</dd>
+                        <dd>20万元以上</dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt>房屋面积</dt>
+                        <dd>全部</dd>
+                        <dd>  0-60m2</dd>
+                        <dd>60-100m2</dd>
+                        <dd>100-150m2</dd>
+                        <dd>150-300m2</dd>
+                        <dd>300m2 以上</dd>
+                    </dl>
+                </div>
+            </div>
+            <input class="bottom_anniu" type="button" value="打开分类">
+        </div>
+        <div class="center">
+            <p>共检索出 135 份工地<a style="float: right;color: #5a5a5a;"><strong style="text-decoration:underline;color:#ff9021;">发布时间</strong> | 浏览量 | 评论量</a></p>
+            <ul class="clearfix">
+                <li onclick="location.href='supervisor_details.html'">
+                    <img src="../images/anii_img1.jpg">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <img src="../images/anii_img2.jpg">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img3.jpg">
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img1.jpg">
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img3.jpg">
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img1.jpg">
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <img src="../images/anii_img1.jpg">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <img src="../images/anii_img2.jpg">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img3.jpg">
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img1.jpg">
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img3.jpg">
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img3.jpg">
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img1.jpg">
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img3.jpg">
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img3.jpg">
+                </li>
+                <li onclick="location.href='supervisor_details.html'">
+                    <span>
+                        <div style="width: 282px;">
+                            <h3>北京麒麟瑞景别墅</h3>
+                            <p>面积：<strong>135m2</strong></p>
+                            <p>决算：<strong>23万元（预算：36万元）</strong></p>
+                            <p>实际工期：<strong>32天（预计工期：45天）</strong></p>
+                            <p>业主：<strong>李女士</strong></p>
+                            <p>工长：<strong>张元培</strong></p>
+                            <p>完成进度：<strong><progress value="65" max="100"></progress>65%</strong></p>
+                        </div>
+                    </span>
+                    <img src="../images/anii_img1.jpg">
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="footer">
+            <div class="footer_content">
+                    <p>装小蜜家装监理-管家式家装监理</p>
+                    <p>北京朝阳区SOHO现代城6号楼505室</p>
+                    <p>装小蜜投诉邮箱：ceo@ zhuangxiaomi.com</p>
+                    <p>© 2015 ZHUANGXIAOMI.COM     京ICP备13026313号</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

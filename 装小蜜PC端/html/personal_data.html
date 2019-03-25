@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>装小蜜团队-个人资料</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .head{
+            background: url(../images/personal_banner.jpg) no-repeat center center;
+            background-size: cover;
+        }
+            .public_head{
+                height: 901px;
+            }
+            @media screen and (min-width:1600px){
+                .public_head{
+                    height: 1080px;
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="scroll">
+            <a href="#" style="background: url(../images/scroll_rocket.png) no-repeat center center;margin-bottom: 10px;"></a>
+            <a class="QR_Code" style="background: url(../images/scroll_QRCode.png) no-repeat center center;"><img src="../images/QR_Code.jpg" alt=""></a>
+        </div>
+        <div class="head public_head clearfix">
+            <div class="top">
+                <a href="../index.html"></a>
+                <span class="span_self">监理服务</span>
+                <span>工地直播</span>
+                <span>论坛</span>
+                <button onclick="location.href='login.html'">登陆</button>
+                <button onclick="location.href='register.html'">注册</button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

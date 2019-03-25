@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>装小蜜服务介绍</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .head{
+            background: url(../images/team_banner.jpg) no-repeat center center;
+            background-size: cover;
+        }
+                div.top_user{
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0px;
+                    right: 45px;
+                    z-index: 99;
+                    float:right;
+                    background-color: rgba(0,0,0,0);
+                }
+                .top_user a{
+                    float: right;
+                    margin-top: 20px;
+                    padding: 0 18px 0 57px;
+                    width: auto;
+                    text-indent: 10px;
+                    line-height: 60px;
+                    font-size: 18px;
+                    color: #a4a4a4;
+                    background: url(../images/user_img.png) no-repeat left center,url(../images/v.png) no-repeat right center;
+                }  
+                .top_user li{
+                    cursor: pointer;
+                }
+            /* .head_content */
+            .head_content{
+                margin-top: -250px;
+                height: 635px;
+                color: #fff;
+            }
+                .service_title{
+                    display: block;
+                    height: 330px;
+                    overflow: hidden;
+                    opacity: 1;
+                    transition: height 3s,opacity 2s;
+                    -webkit-transition: height 3s,opacity 2s;
+                }
+                .service_titles{
+                    height: 0;
+                    opacity: 0;
+                    transition: height 3s,opacity 2s;
+                    -webkit-transition: height 3s,opacity 2s;
+                }
+                    .service_title h3{
+                        margin-top: 85px;
+                        text-align: center;
+                        font-size: 56px;
+                    }
+                    .service_title p{
+                        margin-bottom: 100px;
+                        text-align: center;
+                        line-height: 71px;
+                        font-size: 21px;
+                    }
+                .service_content{
+                    position: relative;
+                    border: 1px solid rgba(255, 255, 255, 0);
+                }
+                    .head_content .service_content span{
+                        float: left;
+                        margin: 0 54px 0 0;
+                        width: 138px;
+                        height: 138px;
+                    }
+                    .head_content .service_content span:last-child{
+                        margin: 0;
+                    }
+                    .head_content .service_content span img{
+                        float: left;
+                    }
+                    .service_content span:nth-child(1) > div{
+                        height: 287px;
+                        color: #ff6262;
+                        background: url(../images/cqsh_content.png) no-repeat;
+                    }
+                        .service_content span:nth-child(1) > div a{
+                            background-color: #ff6262;
+                        }
+                    .service_content span:nth-child(2) > div{
+                        height: 260px;
+                        color: #F3B835;
+                        background: url(../images/xcjd_content.png) no-repeat;
+                    }
+                        .service_content span:nth-child(2) > div a{
+                            background-color: #F3B835;
+                        }
+                    .service_content span:nth-child(3) > div{
+                        height: 334px;
+                        color: #99CD5C;
+                        background: url(../images/ybgc_content.png) no-repeat;
+                    }
+                        .service_content span:nth-child(3) > div a{
+                            background-color: #99CD5C;
+                        }
+                    .service_content span:nth-child(4) > div{
+                        height: 474px;
+                        color: #6AC3BE;
+                        background: url(../images/zqgc_content.png) no-repeat;
+                    }
+                        .service_content span:nth-child(4) > div a{
+                            background-color: #6AC3BE;
+                        }
+                    .service_content span:nth-child(5) > div{
+                        height: 375px;
+                        color: #6A8CD9;
+                        background: url(../images/clys_content.png) no-repeat;
+                    }
+                        .service_content span:nth-child(5) > div a{
+                            background-color: #6A8CD9;
+                        }
+                    .service_content span:nth-child(6) > div{
+                        height: 296px;
+                        color: #AD77D8;
+                        background: url(../images/jgys_content.png) no-repeat;
+                    }
+                        .service_content span:nth-child(6) > div a{
+                            background-color: #AD77D8;
+                        }
+                        .service_content span div h4{
+                            text-align: center;
+                            line-height: 46px;
+                            font-size: 24px;
+                        }
+                        .service_content span div p{
+                            margin: 0 27px;
+                            text-indent: 2em;
+                            text-align: center;
+                            line-height: 24px;
+                            font-size: 14px;
+                        }
+                        .service_final{
+                            margin: 20px 19px 0 18px;
+                        }
+                        .service_content span div a{
+                            float: left;
+                            margin: 2px 8px 2px 9px;
+                            text-indent: 1em;
+                            line-height: 32px;
+                            width: 171px;
+                            height: 32px;
+                            font-size: 12px;
+                            color: #fff;
+                        }
+                    .all,.null{
+                        position: absolute;
+                        left: 50%;
+                        margin-left: -485px;
+                        top: 160px;
+                        box-sizing: border-box;
+                        width: 978px;
+                        overflow: hidden;
+                    }
+                    .null{
+                        /* display: none; */
+                        opacity: 0;
+                        height: 0px !important;
+                        padding: 0;
+                        transition: opacity 1.5s,height 1.5s,padding 1.5s;
+                        -webkit-transition: opacity 1.5s,height 1.5s,padding 1.5s;
+                    }
+                    .all{
+                        padding: 35px 0 31px;
+                        /* display: block; */
+                        opacity: 1;
+                        transition: opacity 3s,height 3s,padding 3s;
+                        -webkit-transition: opacity 3s,height 3s,padding 3s;
+                    }
+
+            /* center */
+            .center{
+            margin-bottom: 81px;
+            height: 672px;
+            }
+            .center h3{
+                text-align: center;
+                line-height: 78px;
+                font-size: 30px;
+                color: #595959;
+                background-color: #f9f9f9;
+            }
+            .center_content{
+                margin: 0 auto ;
+                padding: 18px 0;
+                border-bottom: 1px solid #E3E3E3;
+                width: 548px;
+                color: #797979;
+            } 
+                .center_content h4{
+                    line-height: 21px;
+                    font-size: 21px;
+                    font-weight: 540;
+                    background: url(../images/user_guanbi.png) no-repeat right center;
+                }      
+                .center_content p{
+                    overflow: hidden;
+                    height: 0px;
+                    line-height: 20px;
+                    font-size: 12px;
+                    transition: margin 1s,height 1s;
+                }
+                .center_content:hover p{
+                    margin-top: 14px;
+                    height: 40px;
+                    transition: margin 1s,height 1s;
+                }
+                .center_content:hover h4{
+                    color: #ffa650;
+                    background: url(../images/user_zhankai.png) no-repeat right center;
+                }
+                ul{
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    margin-top: 100px;
+                    margin-left: 7.5px;
+                    width: 124px;
+                    height: 111px;
+                    background-color: rgba(0,0,0,0.7);
+                    transition: height 2s;
+                }
+                ul li{
+                    text-align: center;
+                    line-height: 30px;
+                    list-style: none;
+                    font-size: 14px;
+                    color: #a4a4a4;
+                }
+                ul li:hover{
+                    color:#ffa650; 
+                }
+            
+    </style>
+    <script>
+        window.onload = function(){
+            var set = document.getElementsByClassName("top_user")[0];
+            var button = document.getElementsByClassName("top")[0].getElementsByTagName("button");
+            var a = document.getElementsByClassName("top")[0].getElementsByTagName("a")[1];
+            // alert(window.location.href.split("?id=")[1]);
+            if(window.location.href.split("?id=")[1] == "login"){
+                button[0].className = "none";
+                button[1].className = "none";
+                set.onmouseover = function(){
+                    set.getElementsByTagName("ul")[0].className = "";
+                }
+                set.onmouseleave = function(){
+                    set.getElementsByTagName("ul")[0].className = "none";
+                }
+            }else{
+                set.className = "none";
+
+            }
+            var head = document.getElementsByClassName("head_content")[0];
+            var title = document.getElementsByClassName("service_title")[0];
+            var span = document.getElementsByClassName("service_content")[0];
+            var spans = span.getElementsByTagName("span");
+            head.onmouseleave = function(){
+                title.className = "service_title";
+                for(var j = 0;j < 6;j++){
+                        spans[j].getElementsByTagName("div")[0].className = "null";
+                }
+            }
+            for(var i = 0;i < spans.length;i++){
+                spans[i].index = i;
+                spans[i].onmouseover = function(){
+                    title.className = "service_title service_titles";
+                    // title.style.display = "none";
+                    for(var j = 0;j < 6;j++){
+                        if(j == this.index){
+                            this.getElementsByTagName("div")[0].className = "all";
+                        }
+                        else{
+                            spans[j].getElementsByTagName("div")[0].className = "null";
+                        }
+                    }
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="scroll">
+            <a href="#" style="background: url(../images/scroll_rocket.png) no-repeat center center;margin-bottom: 10px;"></a>
+            <a class="QR_Code" style="background: url(../images/scroll_QRCode.png) no-repeat center center;"><img src="../images/QR_Code.jpg" alt=""></a>
+        </div>
+        <div class="head public_head clearfix">
+            <div class="top">
+                <a href="../index.html"></a>
+                <span class="span_self">监理服务</span>
+                <span>工地直播</span>
+                <span>论坛</span>
+                <button onclick="location.href='login.html'">登陆</button>
+                <button onclick="location.href='register.html'">注册</button>
+                <div class="top_user">
+                    <a href="user_center.html?id=0">张曼莉</a>
+                    <ul class="none" style="display: block;">
+                        <li style="margin-top: 4px;" onclick="location.href='user_center.html?id=0'">我的工地</li>
+                        <li onclick="location.href='user_center.html?id=1'">我的评论</li>
+                        <li style="margin-bottom: 17px;" onclick="location.href='user_center.html?id=2'">账号设置</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="head_content">
+                    <div class="service_title">
+                        <h3>家装监理</h3>
+                        <p>6大项 150条检验标准 全程施工管家式监理服务</p>
+                    </div>
+                <div class="service_content clearfix">
+                    <span>
+                        <img src="../images/cqsh.png">
+                        <div class="null">
+                            <h4>初期审核</h4>
+                            <p style="margin-left: 195px;text-align:left;"><b>图纸审核：</b> 用专业的角度，帮您从源头审核装饰公司施工队报价，科学提供合理建议。</p>
+                            <p style="margin-left: 195px;text-align:left;"><b>报价审核：</b>源头把关，彻底杜绝报价不合理，从初期避免报价陷阱虚高报价。</p>
+                            <div class="service_final clearfix">
+                                <a>单价属于合理范围</a>
+                                <a>无重复报价</a>
+                                <a>无偷项漏项</a>
+                                <a>拆改无违规事项</a>
+                                <a>方案与原结构相对应</a>
+                                <a>报价符合设计方案</a>
+                                <a>无重复工艺</a>
+                                <a>图纸全面</a>
+                                <a>材料使用符合规范</a>
+                                <a>造型方案可实现</a>
+                                <a>材料与施工工艺符合</a>
+                                <a>无重复收费</a>
+                                <a>符合图纸规范</a>
+                                <a>无安全隐患</a>
+                                <a>空间布置无使用障碍</a>
+                            </div>
+                        </div>
+                    </span>
+                    <span>
+                        <img src="../images/xcjd.png">
+                        <div class="null">
+                            <h4>现场交底 - 16项</h4>
+                            <p>仔细检查房屋基本情况，业主与监理、施工队、设计师，三方确定房屋监理方案。</p>
+                            <div class="service_final clearfix">
+                                <a>单价属于合理范围</a>
+                                <a>无重复报价</a>
+                                <a>无偷项漏项</a>
+                                <a>拆改无违规事项</a>
+                                <a>方案与原结构相对应</a>
+                                <a>报价符合设计方案</a>
+                                <a>无重复工艺</a>
+                                <a>图纸全面</a>
+                                <a>材料使用符合规范</a>
+                                <a>造型方案可实现</a>
+                                <a>材料与施工工艺符合</a>
+                                <a>无重复收费</a>
+                                <a>符合图纸规范</a>
+                                <a>无安全隐患</a>
+                                <a>空间布置无使用障碍</a>
+                            </div>
+                        </div>
+                    </span>
+                    <span>
+                        <img src="../images/ybgc.png">
+                        <div class="null">
+                            <h4>隐蔽工程 - 26项</h4>
+                            <p>监理会通过专业的技能为业主从拆除新建项目、水路改造、电路改造、隐蔽工程验收四个节点层层把好质量关。</p>
+                            <div class="service_final clearfix">
+                                <a>单价属于合理范围</a>
+                                <a>无重复报价</a>
+                                <a>无偷项漏项</a>
+                                <a>拆改无违规事项</a>
+                                <a>方案与原结构相对应</a>
+                                <a>报价符合设计方案</a>
+                                <a>无重复工艺</a>
+                                <a>图纸全面</a>
+                                <a>材料使用符合规范</a>
+                                <a>造型方案可实现</a>
+                                <a>材料与施工工艺符合</a>
+                                <a>无重复收费</a>
+                                <a>符合图纸规范</a>
+                                <a>无安全隐患</a>
+                                <a>空间布置无使用障碍</a>
+                                <a>无偷项漏项</a>
+                                <a>拆改无违规事项</a>
+                                <a>方案与原结构相对应</a>
+                                <a>报价符合设计方案</a>
+                                <a>无重复工艺</a>
+                                <a>无重复收费</a>
+                                <a>符合图纸规范</a>
+                                <a>无安全隐患</a>
+                                <a>空间布置无使用障碍</a>
+                                <a>无偷项漏项</a>
+                            </div>
+                        </div>
+                    </span>
+                    <span>
+                        <img src="../images/zqgc.png">
+                        <div class="null">
+                            <h4>中期工程 - 46项</h4>
+                            <p>由业主与监理、设计师、施工负责人三方参与，对工程材料、设计、工艺质量46项进行整体验收，合格后签字确认。</p>
+                            <div class="service_final clearfix">
+                                <a>单价属于合理范围</a>
+                                <a>无重复报价</a>
+                                <a>无偷项漏项</a>
+                                <a>拆改无违规事项</a>
+                                <a>方案与原结构相对应</a>
+                                <a>报价符合设计方案</a>
+                                <a>无重复工艺</a>
+                                <a>无重复报价</a>
+                                <a>无偷项漏项</a>
+                                <a>拆改无违规事项</a>
+                                <a>方案与原结构相对应</a>
+                                <a>报价符合设计方案</a>
+                                <a>图纸全面</a>
+                                <a>材料使用符合规范</a>
+                                <a>造型方案可实现</a>
+                                <a>材料与施工工艺符合</a>
+                                <a>无重复收费</a>
+                                <a>无重复报价</a>
+                                <a>无偷项漏项</a>
+                                <a>拆改无违规事项</a>
+                                <a>符合图纸规范</a>
+                                <a>无安全隐患</a>
+                                <a>空间布置无使用障碍</a>
+                                <a>材料与施工工艺符合</a>
+                                <a>无重复收费</a>
+                                <a>方案与原结构相对应</a>
+                                <a>报价符合设计方案</a>
+                                <a>符合图纸规范</a>
+                                <a>无安全隐患</a>
+                                <a>空间布置无使用障碍</a>
+                                <a>材料与施工工艺符合</a>
+                                <a>无重复收费</a>
+                                <a>无重复报价</a>
+                                <a>符合图纸规范</a>
+                                <a>无安全隐患</a>
+                                <a>空间布置无使用障碍</a>
+                                <a>材料与施工工艺符合</a>
+                                <a>无重复收费</a>
+                                <a>无偷项漏项</a>
+                                <a>拆改无违规事项</a>
+                                <a>符合图纸规范</a>
+                                <a>无安全隐患</a>
+                                <a>空间布置无使用障碍</a>
+                                <a>材料与施工工艺符合</a>
+                                <a>无重复收费</a>
+                            </div>
+                        </div>
+                    </span>
+                    <span>
+                        <img src="../images/clys.png">
+                        <div class="null">
+                            <h4>材料验收 - 27类</h4>
+                            <p style="text-align: left;">装修过程中最容易出现纠纷的就是材料，施工方以次充好，或者合同中没有详细准确的约定都会造成纠纷。确定合同的时候必须明确规定各种材料
+                                的详细信息，同时在材料进场的时候监理人员会对墙体材料、地面材料、装饰线、顶部材料、紧固件、连接件、胶粘剂等诸类别材料按合同明确的材料
+                                标准进行认真验收。</p>
+                            <div class="service_final clearfix">
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                            </div>
+                        </div>
+                    </span>
+                    <span>
+                        <img src="../images/jgys.png">
+                        <div class="null">
+                            <h4>竣工验收 - 20项</h4>
+                            <p>对该项目20项节点，是否符合规划设计要求以及建筑施工和设备安装质量进行全面检验。</p>
+                            <div class="service_final clearfix">
+                                <a>单价属于合理范围</a>
+                                <a>无重复报价</a>
+                                <a>无偷项漏项</a>
+                                <a>拆改无违规事项</a>
+                                <a>方案与原结构相对应</a>
+                                <a>报价符合设计方案</a>
+                                <a>无重复工艺</a>
+                                <a>图纸全面</a>
+                                <a>材料使用符合规范</a>
+                                <a>造型方案可实现</a>
+                                <a>材料与施工工艺符合</a>
+                                <a>无重复收费</a>
+                                <a>符合图纸规范</a>
+                                <a>无安全隐患</a>
+                                <a>空间布置无使用障碍</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                                <a>暂定名</a>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="center">
+            <h3>常见问题</h3>
+            <div class="center_content" style="margin-top: 30px;">
+                <h4>家庭装修为什么请监理？</h4>
+                <p>装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把装小蜜公司会导致设计的效果完全无法施预算不详成业主实际花费远远超出计划出现充好的情况……</p>
+            </div>
+            <div class="center_content">
+                <h4>如何预约检测？</h4>
+                <p>装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把装小蜜公司会导致设计的效果完全无法施预算不详成业主实际花费远远超出计划出现充好的情况……</p>
+            </div>
+            <div class="center_content">
+                <h4>为什么要进行专业的车辆评估？</h4>
+                <p>装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把装小蜜公司会导致设计的效果完全无法施预算不详成业主实际花费远远超出计划出现充好的情况……</p>
+            </div>
+            <div class="center_content">
+                <h4>大搜车给车辆报价吗？</h4>
+                <p>装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把装小蜜公司会导致设计的效果完全无法施预算不详成业主实际花费远远超出计划出现充好的情况……</p>
+            </div>
+            <div class="center_content">
+                <h4>如果对竞价价格不满意怎么办？</h4>
+                <p>装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把装小蜜公司会导致设计的效果完全无法施预算不详成业主实际花费远远超出计划出现充好的情况……</p>
+            </div>
+            <div class="center_content">
+                <h4>大搜车如何保证交易和手续的安全性？</h4>
+                <p>装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把装小蜜公司会导致设计的效果完全无法施预算不详成业主实际花费远远超出计划出现充好的情况……</p>
+            </div>
+            <div class="center_content">
+                <h4>转让需要带哪些东西？</h4>
+                <p>装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把装小蜜公司会导致设计的效果完全无法施预算不详成业主实际花费远远超出计划出现充好的情况……</p>
+            </div>
+            <div class="center_content">
+                <h4>支持提供上门检测的区域有哪些？</h4>
+                <p>装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把装小蜜公司会导致设计的效果完全无法施预算不详成业主实际花费远远超出计划出现充好的情况……</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer_content">
+                    <p>装小蜜家装监理-管家式家装监理</p>
+                    <p>北京朝阳区SOHO现代城6号楼505室</p>
+                    <p>装小蜜投诉邮箱：ceo@ zhuangxiaomi.com</p>
+                    <p>© 2015 ZHUANGXIAOMI.COM     京ICP备13026313号</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

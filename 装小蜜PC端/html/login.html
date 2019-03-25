@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>装小蜜账号登陆</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/reg_login_public.css">
+    <style>
+            .head_content{
+                background: url(../images/register_guangao.png) no-repeat left center;
+            }
+                input[name~=phone]{
+                    margin-bottom: 0;
+                }
+                p.tishi{
+                    color: #ff5959;
+                    margin-bottom: 0;
+                    text-indent: 2em;
+                    line-height: 32px;
+                    background: url(../images/gth.png) no-repeat left center;
+                }
+                div.container span.pass{
+                    margin-bottom: 16px;
+                }
+                span.pass a{
+                    float: right;
+                    color: #5b5b5b;
+                }
+                button.login,button.register{
+                    margin: 0 0 82px;
+                    font-size: 18px;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="scroll">
+            <a href="#" style="background: url(../images/scroll_rocket.png) no-repeat center center;margin-bottom: 10px;"></a>
+            <a class="QR_Code" style="background: url(../images/scroll_QRCode.png) no-repeat center center;"><img src="../images/QR_Code.jpg" alt=""></a>
+        </div>
+        <div class="head public_head clearfix">
+            <div class="top">
+                <a href="../index.html"></a>
+                <span class="span_self">监理服务</span>
+                <span>工地直播</span>
+                <span>论坛</span>
+                <button onclick="location.href='#'">登陆</button>
+                <button onclick="location.href='register.html'">注册</button>
+            </div>
+            <div class="head_content">
+                <form class="head_register">
+                    <input type="text" name="phone" id="" placeholder="手 机 号 Phone">
+                    <p class="tishi">登录手机号不能为空</p>
+                    <input type="password" name="" id="" placeholder="输 入 密 码 Password">
+                    <input type="text" name="Verification" id="" placeholder="验 证 码 Verification">
+                    <button style="float: right;background: url(../images/yzm.jpg) no-repeat center center;"></button>
+                    <span class="pass"><input type="checkbox" name="checkbox" id=""><p>记住密码</p><a href="seek_pass.html">忘记密码?</a></span>
+                    <button class="login" style="float: left;" type="button" onclick="location.href='register.html'">注册</button>
+                    <button class="register" style="float: right;font-size: 18px;" type="button" onclick="location.href='service_introduce.html?id=login'">登陆</button>
+                    <span class="line"></span>
+                    <span class="text">使用以下账号直接登陆</span>
+                    <span class="line"></span>
+                    <div class="register_link clearfix">
+                        <a href="service_introduce.html?id=login" style="background: url(../images/weibo.png) no-repeat;background-size:100%;"></a>
+                        <a href="service_introduce.html?id=login" style="background: url(../images/qq.png) no-repeat;background-size:100%;"></a>
+                        <a href="service_introduce.html?id=login" style="background: url(../images/weixin.png) no-repeat;background-size:100%;"></a>
+                        <a href="service_introduce.html?id=login" style="background: url(../images/dou.png) no-repeat;background-size:100%;"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

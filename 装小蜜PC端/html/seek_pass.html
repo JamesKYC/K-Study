@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>找回密码</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/reg_login_public.css">
+    <style>
+            .head_content{
+                margin-top: -225px;
+            }
+            .head_content p{
+                margin-bottom: 35px;
+                text-align: center;
+                line-height: 24px;
+                font-size: 24px;
+            }
+            strong.color{
+                color: #ffa751;
+            }
+                .head_register{
+                    float: none;
+                    margin: 0 auto;
+                    padding: 45px 90px 0;
+                    box-sizing: border-box;
+                    width: 494px;
+                    height: 296px;
+                }
+                input[type="text"],input[type="password"]{
+                    text-indent: 2em;
+                    background: #fff url(../images/passwords.png) no-repeat 0.5em center;
+                }
+                input[type="text"]:focus,input[type="password"]:focus{
+                    background: #fff url(../images/password.png) no-repeat 0.5em center;
+                }
+                .container .a{
+                    display: none;
+                }
+    </style>
+    <script>
+        function last(a,b,c){
+            var form = document.getElementsByClassName("head_register");
+            var p = document.getElementsByTagName("strong");
+            form[a].className = "head_register a";
+            form[b].className = "head_register a";
+            form[c].className = "head_register";
+            p[c].className = "color";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="scroll">
+            <a href="#" style="background: url(../images/scroll_rocket.png) no-repeat center center;margin-bottom: 10px;"></a>
+            <a class="QR_Code" style="background: url(../images/scroll_QRCode.png) no-repeat center center;"><img src="../images/QR_Code.jpg" alt=""></a>
+        </div>
+        <div class="head public_head clearfix">
+            <div class="top">
+                <a href="../index.html"></a>
+                <span class="span_self">监理服务</span>
+                <span>工地直播</span>
+                <span>论坛</span>
+                <button onclick="location.href='login.html'">登陆</button>
+                <button onclick="location.href='register.html'">注册</button>
+            </div>
+            <div class="head_content">
+                <p><strong class="color">1.输入手机号码  >  </strong><strong>2.输入验证码  >  </strong><strong>3.重置密码</strong></p>
+                <form class="head_register">
+                    <input type="text" name="" id="" placeholder="手 机 号 Phone">
+                    <input type="text" name="Verification" id="" placeholder="验 证 码 Verification">
+                    <button style="float: right;background: url(../images/yzm.jpg) no-repeat center center;"></button>
+                    <button class="register" style="display: block;margin: 27px auto 0;font-size: 18px;" type="button" onclick="last(a='0',b='2',c='1');">确定</button>
+                </form>
+                <form class="head_register a">
+                    <input type="text" name="" id="" placeholder="手 机 号 Phone" value="136-5325-1806">
+                    <input type="text" name="Verification" id="" placeholder="手机验证码">
+                    <button style="float: right;">获取激活码</button>
+                    <button class="register" style="display: block;margin: 27px auto 0;font-size: 18px;" type="button" onclick="last(a='0',b='1',c='2');">确定</button>
+                </form>
+                <form class="head_register a">
+                    <input type="password" name="" id="" placeholder="新密码">
+                    <input type="password" name="" id="" placeholder="确认密码">
+                    <button class="register" style="display: block;margin: 27px auto 0;font-size: 18px;" type="button" onclick="location.href='login.html'">确定</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>装小蜜首页</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public.css">
+    <script src="js/back.js"></script>
+    <style>
+        .head img{
+            float: left;
+            width: 100%;
+        }
+        .top{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .yuding{
+            position: absolute;
+            left: 50%;
+            top: 61.3%;
+            margin-left: -4.5%;
+            display: block;
+            /* margin: 10px auto 0; */
+            border: 1px solid #fff;
+            border-radius: 3px;
+            width: 9%;
+            height: 4.9%;
+            background: url(images/yuding.png) no-repeat center center;
+            background-size: 100%;
+        }
+        .center{
+            margin-top: 0px;
+            width: 100%;
+            background-color: #fff;
+        }
+            .center_content{
+                width: 100%;
+                background-color: #2C2C2C;
+            }
+            .center_public,.zhanshi_lunfan{
+                margin: 0 auto;
+                box-sizing: border-box;
+                width: 1100px;
+                text-align: center;
+            }
+            .introduce{
+                padding: 65px 565px 55px 0px;
+                background: url(images/index_guangao.jpg) no-repeat right 65px;
+            }
+                .introduce h3{
+                    margin-bottom: 38px;
+                    border-bottom: 1px solid #DBDBDB;
+                    line-height: 54px;
+                    font-size: 25px;
+                    color: #9b9b9b;
+                }
+                    .introduce h3 strong{
+                        font-size: 30px;
+                        color: #ffa751;
+                    }
+                .introduce p{
+                    margin-bottom: 20px;
+                    text-indent: 2em;
+                    text-align: left;
+                    line-height: 24px;
+                    font-size: 14px;
+                    color: #7f7f7f;
+                }
+                .introduce button,.span_contents button,.span_content button,.center_zhanshi button{
+                    margin-top: 8px;
+                    border-radius: 3px;
+                    border: none;
+                    width: 152px;
+                    height: 40px;
+                    color: #fff;
+                    background-color: #ffa751;
+                }
+            .center_content h4,.center_zhanshi h4{
+                padding-top: 60px;
+                text-align: center;
+                line-height: 36px;
+                font-size: 36px;
+                color: #fff;
+            }
+            .center_content p,.center_zhanshi p{
+                margin-bottom: 32px;
+                text-align: center;
+                line-height: 54px;
+                font-size: 14px;
+                color: #dbdbdb;
+            }
+            .center_content span{
+                float: left;
+                margin-right: 12px;
+                padding-top: 262px;
+                box-sizing: border-box;
+                overflow: hidden;
+                width: 266px;
+                height: 355px;
+                transition: padding 1s;
+            }
+            .center_content .span_sheet{
+                padding-top: 0px;
+                transition: padding 1s;
+            }
+            .center_content span .span_content{
+                padding: 0px;
+                transition: padding 1s;
+            }
+            .center_content span .span_contents{
+                padding: 92px 0 128px;
+                transition: padding 1s;
+            }
+                .center_content span h5{
+                    padding-top: 20px;
+                    font-size: 21px;
+                    color: #fff;
+                }
+                .center_content span p{
+                    margin-bottom: 0;
+                    padding-bottom: 10px;
+                    line-height: 42px;
+                    color: #fff;
+                }
+        .center_zhanshi{
+            position: relative;
+            text-align: center;
+        }
+            .center_zhanshi button{
+                position:absolute;
+                left: 50%;
+                top: 162px;
+                margin: 0px 0px 0px -76px;
+            }
+            .center_zhanshi ul{
+                margin: 0 auto 52px;
+                width: 524px;
+            }
+                .center_zhanshi li{
+                    float: left;
+                    margin: 0 10px 0 9px;
+                    border-radius: 2px;
+                    width: 112px;
+                    text-align: center;
+                    line-height: 38px;
+                    list-style-type: none;
+                    color: #fff;
+                    background-color: #2C2C2C;
+                }
+            .zhanshi_lunfan{
+                height: 490px;
+                text-align: center;
+            }
+                .zhanshi_lunfan h3,h2{
+                    padding-bottom: 60px;
+                    text-align: center;
+                    line-height: 36px;
+                    font-size: 36px;
+                    color: #ffa751;
+                    background: url(images/index_phone.png) no-repeat center 55px;
+                }
+                .zhanshi_lunfan input,textarea{
+                    display: block;
+                    margin: 0 auto 22px;
+                    border: 1px solid #E1E1E1;
+                    width: 430px;
+                    height: 37px;
+                    text-indent: 1em;
+                    background-color: #F2F2F2;
+                }
+                .zhanshi_lunfan span{
+                    float: left;
+                    margin-left: 46px;
+                }
+                .we_img{
+                    margin: 35PX auto 0;
+                    width: 672px;
+                }
+                    .we_img img{
+                        float: left;
+                        margin: 0 10px 35px;
+                    }
+                .we_img p{
+                    margin-bottom: 12px;
+                    text-align: left;
+                    text-indent: 2em;
+                    line-height: 26px;
+                    font-size: 14px;
+                    color: #2c2c2c;
+                }
+                .zhanshi_lunfan:nth-of-type(4) p{
+                    margin-bottom: 0px;
+                    text-align: center;
+                    line-height: 32px;
+                    font-size: 18px;
+                    color:#4b4b4b;
+                }
+            .zhanshi_href{
+                background-color: #ffa751;
+            }
+                .zhanshi_href ul{
+                    margin: 0 auto;
+                    width: 1100px;
+                }
+                .zhanshi_href ul li{
+                    float: left;
+                    margin: 0 10px 0 9px;
+                    line-height: 51px;
+                    font-family: '宋体';
+                    font-size: 12px;
+                    color: #40332c;
+                }
+                
+
+    </style>
+    <script>
+        window.onload = function(){
+            var spa = document.getElementsByClassName("center_content")[0];
+            var span = spa.getElementsByTagName("span");
+            var zhanshi = document.getElementsByClassName("center_zhanshi")[0];
+            var li = zhanshi.getElementsByTagName("li");
+            var div = document.getElementsByClassName("zhanshi_lunfan");
+            for(var i = 0;i < span.length;i++){
+                span[i].onmouseover = function(){
+                    this.className = "span_sheet";
+                    this.getElementsByTagName("div")[0].className = "span_contents";
+                }
+                span[i].onmouseleave = function(){
+                    this.className = "";
+                    this.getElementsByTagName("div")[0].className = "span_content";
+                }
+            }
+            for(var i =0;i < li.length;i++){
+                li[i].index = i;
+                li[i].onmouseover = function(){
+                    for(var j = 0;j < 4; j++){
+                        if(this.index == j){
+                            this.style.backgroundColor = "#FFA751";
+                            div[j].className = "zhanshi_lunfan";
+                        }
+                        else{
+                            li[j].style.backgroundColor = "#2C2C2C";
+                            div[j].className = "zhanshi_lunfan none";
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="scroll">
+            <a id="btnn" href="#" style="background: url(images/scroll_rocket.png) no-repeat center center;margin-bottom: 10px;"></a>
+            <a class="QR_Code" style="background: url(images/scroll_QRCode.png) no-repeat center center;"><img src="images/QR_Code.jpg" alt=""></a>
+        </div>
+        <div class="head clearfix">
+            <img src="images/index_banners.jpg">
+            <div class="top">
+                <a href="index.html"></a>
+                <span class="span_self">监理服务</span>
+                <span>工地直播</span>
+                <span>论坛</span>
+                <button onclick="location.href='html/login.html'">登陆</button>
+                <button onclick="location.href='html/register.html'">注册</button>
+            </div>
+            <a class="yuding" href="#"></a>
+            
+        </div>
+
+        <div class="center">
+            <div class="center_public introduce">
+                <h3><strong>SUPERVISION /</strong> 监理服务介绍</h3>
+                <p>装小蜜”开创管家式监理服务理念，用专业角度帮助业主处理装修中的相关事宜，对装修工程进行全方位的监理，通过装小蜜积累的项目管理经验和行业资源，让业主省时、省钱、省心的实现高质量的装修效果。 </p>
+                <p>管家式监理不同于传统的监理，传统监理只负责工程质量的验收，装小蜜更关注装修的整体方案，除了监理工程质量之外，还协助业主筛选施工方，审核图纸预算，跟踪工程进度，提供资金托管，主材价格审核等，站在业主角度，从源头把控，全方位维护业主利益。</p>
+                <button onclick="location.href='html/service_introduce.html'">了解更多</button>
+            </div>
+            <div class="center_content">
+                <div class="center_public clearfix">
+                    <h4>监理数据支持</h4>
+                    <p>135份专业报告，专业监理师全程一对一解答，帮你远离装修猫腻，把好装修质量关！</p>
+                    <span style="background:url(images/index_lanmu1.jpg) no-repeat;">
+                        <div class="span_content" style="background-color: rgba(227,153,58,0.9);">
+                            <h5>家装监理</h5>
+                            <p>4大验收阶段 78项验收标准全程把关</p>
+                            <button style="background: none;border: 1px solid #fff;" onclick="location.href='html/service_introduce.html'">了解更多</button>
+                        </div>
+                    </span>
+                    <span style="background:url(images/index_lanmu2.jpg) no-repeat;">
+                        <div class="span_content" style="background-color: rgba(211,68,61,0.9);">
+                            <h5>监理日志</h5>
+                            <p>微信在线直播您的工地进度</p>
+                            <button style="background: none;border: 1px solid #fff;" onclick="location.href='html/supervisor_details.html'">了解更多</button>
+                        </div>
+                    </span>
+                    <span style="background:url(images/index_lanmu3.jpg) no-repeat;">
+                        <div class="span_content" style="background-color: rgba(85,188,145,0.9);" onclick="location.href='html/article_details.html'">
+                            <h5>服务报告</h5>
+                            <p>装小蜜每日客户服务报告</p>
+                            <button style="background: none;border: 1px solid #fff;">了解更多</button>
+                        </div>
+                    </span>
+                    <span style="margin-right: 0px;background:url(images/index_lanmu4.jpg) no-repeat;">
+                        <div class="span_content" style="background-color: rgba(86,147,200,0.9);">
+                            <h5>监理团队</h5>
+                            <p>国内顶级家装监理师团队 执行国家标准</p>
+                            <button style="background: none;border: 1px solid #fff;" onclick="location.href='html/supervisor_team.html'">了解更多</button>
+                        </div>
+                    </span>
+                </div>
+                
+            </div>
+            <div class="center_zhanshi">
+                <h4 style="color: #2c2c2c;">监理数据支持</h4>
+                <p style="color: #727272;">135份专业报告，专业监理师全程一对一解答，帮你远离装修猫腻，把好装修质量关！</p>
+                <button onclick="location.href='html/supervisor_list.html'">更多案例</button>
+                <img src="images/index_zhanshi.jpg" style="display:block;margin-bottom: 60px;width: 100%;">
+                <ul class="clearfix">
+                    <li style="background-color: #FFA751;">联系我们</li>
+                    <li>权威报道</li>
+                    <li>关于我们</li>
+                    <li>加入我们</li>
+                    
+                </ul>
+                <div class="zhanshi_lunfan">
+                    <h3>免费预约监理</h3>
+                    <input type="text" name="" id="" placeholder="姓名 Name">
+                    <input type="text" name="" id="" placeholder="电话 Phone">
+                    <textarea name="" id="" cols="" rows="" placeholder="备注 Note" style="height: 109px;resize: none;"></textarea>
+                    <button style="position:static;margin: 0;">申请监理</button>
+                </div>
+                <div class="zhanshi_lunfan none">
+                    <span style="margin-left: 0px;" onclick="location.href='html/article_details.html'"><img src="images/baodao_img1.jpg"></span>
+                    <span onclick="location.href='html/article_details.html'"><img src="images/baodao_img2.jpg"></span>
+                    <span onclick="location.href='html/article_details.html'"><img src="images/baodao_img3.jpg"></span>
+                    <span onclick="location.href='html/article_details.html'"><img src="images/baodao_img4.jpg"></span>
+                </div>
+                <div class="zhanshi_lunfan none">
+                    <h3 style="padding-bottom: 0px;background: none;">谁是“装小蜜”</h3>
+                    <div class="we_img clearfix">
+                        <img src="images/we_img1.jpg" alt="">
+                        <img src="images/we_img2.jpg" alt="">
+                        <img src="images/we_img3.jpg" alt="">
+                        <img src="images/we_img4.jpg" alt="">
+                        <P>“装小蜜”的愿景是希望让基础装修变的简单，让每个家庭可以花更多的时间在提升家的美观和品质上，而不是像现在一样，大部分精力花在和装修公司斗智斗勇上，最后还因为装修搞的遍体鳞伤。</P>
+                        <P>北京蜜蜂兄弟科技有限公司由国内互联网精英和资深装修监理人士一起创立，并获得国内顶级基金的风险投资，管家式监理理念的开创者，中国首家O2O装修监理服务网站，致力于用专业的第三方监理帮助用户搞定最头痛的装修，帮助业主避开装修中的各种陷阱。</P>
+                    </div>
+                </div>
+                <div class="zhanshi_lunfan none">
+                    <h2 style="font-size: 48px;line-height: 48px;padding-bottom: 0px;">MASTER JOBS</h2>
+                    <h3 style="font-size: 24px;line-height: 24px;padding-bottom: 30px;">高人 / 牛人 / 狂人 / 虚位以待</h3>
+                    <p>想要最大发挥自己的热情和能力／希望得到一份很棒的工作／不希望仅仅为了生存而工作</p>
+                    <p>将你的简历发送至：gongshuai@zhuangxiaomi.com</p>
+                    <img src="images/join_img.jpg">
+                </div>
+            </div>
+
+            <div class="zhanshi_href">
+                <ul class="clearfix">
+                    <li style="margin-left: 0px;font-size: 14px;color: #40332c;"><b>友情链接</b></li>
+                    <li>中国站长</li>
+                    <li>天堂图片</li>
+                    <li>游艺网</li>
+                    <li>包装设计网</li>
+                    <li>驱动之家</li>
+                    <li>懒人图库</li>
+                    <li>建站大师</li>
+                    <li>美图看看</li>
+                    <li>淘公仔</li>
+                    <li>零刻数据</li>
+                    <li>搜狗网址导航</li>
+                    <li>多贝网</li>
+                    <li>视觉中国</li>
+                    <li>蓝色理想</li>
+                    <li>插画中国</li>
+                    <li style="margin-right: 0px;"><img src="images/href_img.jpg" style="vertical-align: middle;"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer_content">
+                    <p>装小蜜家装监理-管家式家装监理</p>
+                    <p>北京朝阳区SOHO现代城6号楼505室</p>
+                    <p>装小蜜投诉邮箱：ceo@ zhuangxiaomi.com</p>
+                    <p>© 2015 ZHUANGXIAOMI.COM     京ICP备13026313号</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

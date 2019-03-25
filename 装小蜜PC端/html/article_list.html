@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文章列表</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .center{
+            background: none;
+        }
+        .center img{
+            float: left;
+        }
+        .center_title_top{
+            float: left;
+            padding: 150px 25px 0 30px;
+            box-sizing: border-box;
+            width: 411px;
+            height: 340px;
+            background: url(../images/article_t_bc.jpg);
+        }
+            .center_title_top h3{
+                font-size: 30px;
+            }
+            .center_title_top p,.center_content_top p{
+                margin-top:15px;
+                font-size: 12px;
+                line-height: 20px;
+                color: #595959;
+            }
+            .center_title span{
+                display: inline-block;
+                padding-left: 30px;
+                box-sizing: border-box;
+                width: 410px;
+                line-height: 57px;
+                font-size: 12px;
+                color: #797979;
+                background-color: #f9f9f9;
+            }
+        .p{
+            float: left;
+            line-height: 49px;
+            font-size: 12px;
+            color: #5a5a5a;
+        }
+            .p strong{
+                text-decoration: underline;
+                color: #ff7200;
+            }
+        .center input{
+            float:right;
+            margin-top: 5px;
+            border: 1px solid #E1E1E1;
+            width: 409px;
+            height: 37px;
+            text-indent: 1em;
+            font-size: 12px;
+            color: #797979;
+        }
+        .center_content{
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
+        .center_content_top{
+            float: left;
+            box-sizing: border-box;
+            padding: 10px 24px 0;
+            width: 847px;
+            height: 142px;
+            background-color: #fff;
+        }
+            .center_content_top h4{
+                box-sizing: border-box;
+                padding-right: 42px;
+                text-indent: 1em;
+                line-height: 60px;
+                font-size: 18px;
+                color: #595959;
+                background: url(../images/tuijian.png) no-repeat left center,url(../images/userimages.png) no-repeat right center;
+            }
+            .center_content_top h4 strong{
+                float:right;
+                font-size: 12px;
+                color: #797979;
+            }
+            .center_content_top p{
+                margin: 0;
+            }
+        .center_content_bottom{
+            float: left;
+            padding: 0 24px 0;
+            box-sizing: border-box;
+            width: 847px;
+            line-height: 47px;
+            font-size: 12px;
+            background-color: #F9F9F9;
+        }
+            .center_content_bottom span{
+                color: #797979;
+            }
+                .center_content_bottom span strong{
+                    color: #ff7200;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="scroll">
+            <a href="#" style="background: url(../images/scroll_rocket.png) no-repeat center center;margin-bottom: 10px;"></a>
+            <a class="QR_Code" style="background: url(../images/scroll_QRCode.png) no-repeat center center;"><img src="../images/QR_Code.jpg" alt=""></a>
+        </div>
+        <div class="head clearfix">
+            <div class="top">
+                <a href="../index.html"></a>
+                <span class="span_self">监理服务</span>
+                <span>工地直播</span>
+                <span>论坛</span>
+                <button onclick="location.href='login.html'">登陆</button>
+                <button onclick="location.href='register.html'">注册</button>
+            </div>
+            
+        </div>
+
+        <div class="center clearfix">
+            <div style="cursor:pointer;" class="center_title clearfix" onclick="location.href='article_details.html'">
+                <img src="../images/article_TOP.jpg">
+                <div class="center_title_top">
+                    <h3>装小蜜带您识别<br />家装监理的12个误区</h3>
+                    <p>装小蜜提供不高于10家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把关，选择合适的装修公司。装小蜜提供不高于10家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把关，选择合适的装修公司。</p>
+                </div>
+                <span><b>标签：</b>监理  家装  误区  装小蜜</span>
+            </div> 
+            <div class="clearfix">
+                <p class="p"><strong>发布时间</strong> | 按人气 | 按推荐 | 按评论</p>
+                <input type="text" name="" id="" placeholder="热门搜索：监理案例">
+            </div>
+
+            <div class="center_content clearfix" onclick="location.href='article_details.html'">
+                <img src="../images/article_img.jpg">
+                <div class="center_content_top">
+                    <h4>【服务报告】一起带您识别家装监理的12个误区<strong>刘家豪/编辑</strong></h4>
+                    <p>装小蜜提供不高于10家装修公司的初步评测，不高于3家装修公司实地工艺评测服务帮您从源头把关，选择合适的装修公司。装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把关，选择合适的装修公司。图纸不合理可能会导致设计的效果完全无法施预算不详细则会出现漏项和材料以次充好的情况，造成业主实际花费远远超出计划……</p>
+                </div>
+                <div class="center_content_bottom">
+                    <span>2015-04-15   19:46</span>
+                    <span style="float:right;"><strong>1024</strong> 人气  / <strong>36</strong> 推荐  / <strong>24</strong> 评论</span>
+                </div>
+            </div> 
+            <div class="center_content clearfix" onclick="location.href='article_details.html'">
+                <img src="../images/article_img.jpg">
+                <div class="center_content_top">
+                    <h4>【服务报告】一起带您识别家装监理的12个误区<strong>刘家豪/编辑</strong></h4>
+                    <p>装小蜜提供不高于10家装修公司的初步评测，不高于3家装修公司实地工艺评测服务帮您从源头把关，选择合适的装修公司。装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把关，选择合适的装修公司。图纸不合理可能会导致设计的效果完全无法施预算不详细则会出现漏项和材料以次充好的情况，造成业主实际花费远远超出计划……</p>
+                </div>
+                <div class="center_content_bottom">
+                    <span>2015-04-15   19:46</span>
+                    <span style="float:right;"><strong>1024</strong> 人气  / <strong>36</strong> 推荐  / <strong>24</strong> 评论</span>
+                </div>
+            </div>  
+            <div class="center_content clearfix" onclick="location.href='article_details.html'">
+                <img src="../images/article_img.jpg">
+                <div class="center_content_top">
+                    <h4>【服务报告】一起带您识别家装监理的12个误区<strong>刘家豪/编辑</strong></h4>
+                    <p>装小蜜提供不高于10家装修公司的初步评测，不高于3家装修公司实地工艺评测服务帮您从源头把关，选择合适的装修公司。装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把关，选择合适的装修公司。图纸不合理可能会导致设计的效果完全无法施预算不详细则会出现漏项和材料以次充好的情况，造成业主实际花费远远超出计划……</p>
+                </div>
+                <div class="center_content_bottom">
+                    <span>2015-04-15   19:46</span>
+                    <span style="float:right;"><strong>1024</strong> 人气  / <strong>36</strong> 推荐  / <strong>24</strong> 评论</span>
+                </div>
+            </div>  
+            <div class="center_content clearfix" onclick="location.href='article_details.html'">
+                <img src="../images/article_img.jpg">
+                <div class="center_content_top">
+                    <h4>【服务报告】一起带您识别家装监理的12个误区<strong>刘家豪/编辑</strong></h4>
+                    <p>装小蜜提供不高于10家装修公司的初步评测，不高于3家装修公司实地工艺评测服务帮您从源头把关，选择合适的装修公司。装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把关，选择合适的装修公司。图纸不合理可能会导致设计的效果完全无法施预算不详细则会出现漏项和材料以次充好的情况，造成业主实际花费远远超出计划……</p>
+                </div>
+                <div class="center_content_bottom">
+                    <span>2015-04-15   19:46</span>
+                    <span style="float:right;"><strong>1024</strong> 人气  / <strong>36</strong> 推荐  / <strong>24</strong> 评论</span>
+                </div>
+            </div>  
+            <div class="center_content clearfix" onclick="location.href='article_details.html'">
+                <img src="../images/article_img.jpg">
+                <div class="center_content_top">
+                    <h4>【服务报告】一起带您识别家装监理的12个误区<strong>刘家豪/编辑</strong></h4>
+                    <p>装小蜜提供不高于10家装修公司的初步评测，不高于3家装修公司实地工艺评测服务帮您从源头把关，选择合适的装修公司。装小蜜提供不高于数家装修公司的初步评测，不高于3家装修公司实地工艺评测服务，帮您从源头把关，选择合适的装修公司。图纸不合理可能会导致设计的效果完全无法施预算不详细则会出现漏项和材料以次充好的情况，造成业主实际花费远远超出计划……</p>
+                </div>
+                <div class="center_content_bottom">
+                    <span>2015-04-15   19:46</span>
+                    <span style="float:right;"><strong>1024</strong> 人气  / <strong>36</strong> 推荐  / <strong>24</strong> 评论</span>
+                </div>
+            </div> 
+            <button style="display: block;margin: 0 auto 12px;border: none;width: 152px;height: 40px;color: #fff;background-color: #FFA751;">查看更多</button>
+        </div>
+
+        <div class="footer">
+            <div class="footer_content">
+                    <p>装小蜜家装监理-管家式家装监理</p>
+                    <p>北京朝阳区SOHO现代城6号楼505室</p>
+                    <p>装小蜜投诉邮箱：ceo@ zhuangxiaomi.com</p>
+                    <p>© 2015 ZHUANGXIAOMI.COM     京ICP备13026313号</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

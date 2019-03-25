@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文章详情</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .center{
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        .center p{
+            line-height: 37px;
+            font-size: 12px;
+            color: #5a5a5a;
+            background-color: #E9E9E9;
+        }
+        .center_title{
+            padding: 38px 0 16px;
+            text-align: center;
+            color: #595959;
+            background-color: #F9F9F9;
+        }
+            .center_title h3{
+                line-height: 21px;
+                font-size: 21px;
+                font-weight: bold;
+            }
+            .center_title p{
+                font-size: 12px;
+                color: #797979;
+                background-color: #F9F9F9;
+            }
+                .center_title p strong{
+                    color: #ff7200;
+                }
+        .center_content{
+            margin: 0 auto;
+            width: 780px;
+        }
+            .center_content img{
+                display: block;
+            }
+            .center_content p{
+                margin: 0 auto;
+                padding: 20px 0;
+                width: 780px;
+                text-indent: 2em;
+                line-height: 24px;
+                font-size: 14px;
+                color: #595959;
+                background-color: #fff;
+            }
+            .center_content p:nth-of-type(4){
+                padding-top: 0px;
+            }
+            .c_c_href{
+                margin: 0 auto ;
+                padding: 26px 4px 43px ;
+                width: 158px;
+            }
+                .c_c_href dt{
+                    margin: 0 0 22px 0;
+                }
+                    .c_c_href dt img{
+                        margin: 0 auto;
+                    }
+                .c_c_href dd{
+                    float: left;
+                    margin: 0 2px;
+                }
+                    .c_c_href dd img{
+                        float: left;
+                    }
+        
+            span.biaoqian{
+                display: block;
+                padding: 14px 30px;
+                border-bottom: 1px solid #E9E9E9;
+                line-height: 36px;
+                font-size: 12px;
+                background-color: #F9F9F9;
+            }
+                span.biaoqian a{
+                    text-decoration: none;
+                    color: #797979;
+                }
+                .right{
+                    float: right;
+                }
+        .pinlun{
+            margin:22px auto 22px;
+            width: 1100px;
+        }
+            .pinlun_content{
+                padding: 0 25px;
+                background-color: #fff;
+            }
+                .pinlun_content h3{
+                    font-size: 21px;
+                    line-height: 55px;
+                }
+                    .pinlun_content h3 strong{
+                        font-size: 14px;
+                        color: #ff7200;
+                    }
+                .pinlun_content span{
+                    display: block;
+                    padding: 40px 0 24px 0;
+                    border: 1px solid #E1E1E1;
+                    text-align: center;
+                    background-color: #F2F2F2;
+                }
+                    .pinlun_content span p{
+                        font-size: 14px;
+                        color: #4c4c4c;
+                    }
+                    .pinlun_content span button{
+                        margin: 16px 7px 0;
+                        border: none;
+                        border-radius: 3px;
+                        width: 54px;
+                        height: 31px;
+                        font-size: 14px;
+                        color: #fff;
+                        background-color: #FFA751;
+                    }
+                    .pinlun_content span button + button{
+                        border: 1px solid #FFA751;
+                        color: #FFA751;
+                        background-color: rgba(0, 0, 0,0);
+                    }
+                .pinlun_content span + span{
+                    padding: 0;
+                    border: none;
+                    height: 70px;
+                    text-align: left;
+                    font-size: 12px;
+                    line-height: 55px;
+                    background: none;
+                }
+                    .pinlun_content span a{
+                        color: #5b5b5b;
+                    }
+                    .pinlun_content span + span button{
+                        float: right;
+                        margin: 10px 0 0 15px;
+                        width: 152px;
+                    }
+            table{
+                border-top: 1px solid #E9E9E9;
+                width: 100%;
+                font-size: 12px;
+                color: #595959;
+                background-color: #F9F9F9;
+            }
+            table td{
+                padding-right: 35px;
+            }
+            table td.userimg{
+                padding: 26px 16px 0 26px;
+                box-sizing: border-box;
+                width: 60px;
+                vertical-align: top;
+            }
+            table .content{
+                padding-top: 12px;
+                padding-bottom: 12px;
+                color: #595959;
+            }
+            .userimg img{
+                float: left;
+                width: 60px;
+                height: 60px;
+            }
+            .name,.gongju{
+                padding-top: 29px;
+            }
+            .three td{
+                padding-bottom: 22px;
+            }
+            .huifu .three td{
+                padding-bottom: 12px;
+            }
+            .huifu .name,.huifu .gongju{
+                padding-top: 15px;
+            }
+            .louceng,.centent .zang a{
+                color: #fe7200;
+            }
+            .louceng,.zang,.xinxi{
+                float: right;
+                text-decoration: none;
+                background: none;
+            }
+            .xinxi{
+                color: #FF7200;
+            }
+            .huifu{
+                width: 97%;
+                border: 1px solid #E6E6E6;
+                background-color: #FFFFFF;
+            }
+            .huifu:last-child{
+                margin-bottom: 22px;
+            }
+            .huifu td{
+                padding-left: 15px;
+                padding-right: 20px;
+            }
+            .huifu .name,.huifu .gongju{
+                padding-top: 15px;
+            }
+            .huifu .content{
+                padding-top: 8px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="scroll">
+            <a href="#" style="background: url(../images/scroll_rocket.png) no-repeat center center;margin-bottom: 10px;"></a>
+            <a class="QR_Code" style="background: url(../images/scroll_QRCode.png) no-repeat center center;"><img src="../images/QR_Code.jpg" alt=""></a>
+        </div>
+        <div class="head clearfix">
+            <div class="top">
+                <a href="../index.html"></a>
+                <span class="span_self">监理服务</span>
+                <span>工地直播</span>
+                <span>论坛</span>
+                <button onclick="location.href='login.html'">登陆</button>
+                <button onclick="location.href='register.html'">注册</button>
+            </div>
+            
+        </div>
+
+        <div class="center">
+            <p>首页 > 服务报告 > 服务报告标题</p>
+            <div class="center_title">
+                <h3>装小蜜带您识别家装监理的12个误区</h3>
+                <p>2015-04-15   19:46  / <strong>1024</strong> 人气  / <strong>36</strong> 推荐  / <strong>24</strong> 评论</p>
+            </div>
+            <div class="center_content clearfix">
+                <p>装修工程不是现成的产品无论施工队还是装修公司，装修都是在装饰设计和施工过程中形成的。试想，装修前，装修企业内部的质检（经常误称为监理），怎么可能指出自家预算中的漏洞，帮助消费者签订公平、透明的装修合同呢？装修过程中装修企业内部的质检是自己监督自己，运动员兼作裁判员的监督机制消费者又会获得几层的知情权装修后如果装修企业自己出现重大问题，又怎么可能代理消方监理才能公正客观的处理装修中的问题，才能真正地保障业主的权益。</p>
+                <img src="../images/article_img1.jpg">
+                <p>管家式监理不同于传统的监理，传统监理只负责工程质量的验收，装小蜜更关注装修的整体方案，除了监理工程质量之外帮助业主审核设计图纸，审核工程预算，跟踪工程进度，装修监理帮助业主审核装修方案和报价，防止高估冒算和中期无限度任意加项加价，使用户支付合理的装修价位提供资金托管及全程咨询服务等，全方位解决业主的装修烦恼。</p>
+                <img src="../images/article_img2.jpg">
+                <p>监理在“第三方”的立场上，公正地为业主服务，不放弃原则也不刻意找茬儿，在整个装修过程中，装修监理着力协调好业主与装饰公司双方的关系，监帮结合，每一次到现场会详细记录填写监理日记及相关验收表格。现场会将现场情况通过微信的方式向业主汇报，以方便业主及时掌握现场进度及情况。使业主与装饰公司的预定目标得以完美实现。装修监理帮助业主审核装修方案和报价，防止高估冒算和中期无限度任意加项加价，使用户支付合理的装修价位，这也是一种省钱。</p>
+                <p>装修监理公司帮助业主检验装饰材料，防止假冒伪劣材料进入施工现场，使用户物有所值的真货进行装修，花同样的钱不用假料，用真材实料，也是一种省钱的措施。尤其，有装修监理，业主可以高枕无忧，节省出的时间和精力以及快乐的装修体验，更是价值不菲，所以说请装修监理不是在花钱，而是在省钱！</p>
+                <dl class="c_c_href clearfix">
+                    <dt><img src="../images/zang.png" alt=""></dt>
+                    <dd><img src="../images/q.png" alt=""></dd>
+                    <dd><img src="../images/wb.png" alt=""></dd>
+                    <dd><img src="../images/kj.png" alt=""></dd>
+                    <dd><img src="../images/fgy.png" alt=""></dd>
+                    <dd><img src="../images/wx.png" alt=""></dd>
+                    <dd style="margin:0 0 0 7px;font-size: 12px;color: #797979;line-height: 16px;"><img src="../images/gd.png" alt="">&nbsp;更多</dd>
+                </dl>
+            </div>
+            <span class="biaoqian">
+                <a><b>标签：</b>监理&nbsp;&nbsp;家装&nbsp;&nbsp;装小蜜</a>  <a class="right" style="padding-right: 40px;background:url(../images/article_user.png) no-repeat right center;">刘家豪/编辑</a>
+            </span>
+        </div>
+        <div class="pinlun">
+            <div class="pinlun_content">
+                <h3>评论<strong>（24）</strong></h3>
+                <span>
+                    <p>只需5秒注册后就能评论了</p>
+                    <button onclick="location.href='login.html'">注册</button>
+                    <button onclick="location.href='register.html'">登陆</button>
+                </span>
+                <span>
+                    <input type="checkbox" name="" id=""><a>同时推荐此文</a>
+                    <button>评论</button><a style="float: right;">还可以输入 <strong style="color: #ff7200;">2000</strong> 个字符</a>
+                </span>
+            </div>
+            <table>
+                <tr><td rowspan="3" class="userimg"><img src="../images/userimages.png" alt=""></td><td class="name">科飞侠</td><td class="gongju"><a class="louceng">35F</a></td></tr>
+                <tr><td class="content" colspan="2">装修公司实地工艺评测服务帮您从源头把关选择合适的装修公司装小蜜的提供不高于10家，资质装修公司的初步评测不高于3家装修公司实地选择合适的装修公司工艺评测服务装修公司
+                        实地工艺评测服务帮您从源头把关选择合适的装修公司装合适的装修工艺评测服务。</td></tr>
+                <tr class="three"><td>45分钟前</td><td><span class="zang">|&nbsp;&nbsp;回复</span><span class="xinxi">赞（9）</span></td></tr>
+            </table>
+            <table>
+                <tr><td rowspan="3" class="userimg"><img src="../images/userimages.png" alt=""></td><td class="name">包工头、小杜</td><td class="gongju"><a class="louceng">34F</a></td></tr>
+                <tr><td class="content" colspan="2">装修公司实地工艺评测服务帮您从源头把关选择合适的装修公司装小蜜的提供不高于10家，资质装修公司的初步评测不高于3家装修公司实地选择合适的装修公司工艺评测服务装修公司
+                        实地工艺评测服务帮您从源头把关选择合适的装修公司装合适的装修工艺评测服务。</td></tr>
+                        <tr class="three"><td>45分钟前</td><td><span class="zang">|&nbsp;&nbsp;回复</span><span class="xinxi">赞（9）</span></td></tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2" class="last" style="padding-left: 0px;padding-right: 0px;">
+                        <table class="huifu">
+                            <tr><td class="name">老詹回复包工头、小杜：</td><td class="gongju"><a class="louceng">33F</a></td></tr>
+                            <tr><td class="content" colspan="2">装修公司实地工艺评测服务帮您从源头把关选择合适的装修公司装小蜜的提供不高于10家，资质装修公司的初步评测不高于3家装修公司实地选择合适的装修公司工艺评测服务装修公司
+                                    实地工艺评测服务帮您从源头把关选择合适的装修公司装合适的装修工艺评测服务。</td></tr>
+                                    <tr class="three"><td>45分钟前</td><td><span class="zang">|&nbsp;&nbsp;回复</span><span class="xinxi">赞（9）</span></td></tr>
+                        </table>
+                        <table class="huifu">
+                            <tr><td class="name">有、小帅回复老詹：</td><td class="gongju"><a class="louceng">33F</a></td></tr>
+                            <tr><td class="content" colspan="2">装修公司实地工艺评测服务帮您从源头把关选择合适的装修公司装小蜜的提供不高于10家，资质装修公司的初步评测不高于3家装修公司实地选择合适的装修公司工艺评测服务装修公司
+                                    实地工艺评测服务帮您从源头把关选择合适的装修公司装合适的装修工艺评测服务。</td></tr>
+                                    <tr class="three"><td>45分钟前</td><td><span class="zang">|&nbsp;&nbsp;回复</span><span class="xinxi">赞（9）</span></td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table class="last">
+                <tr><td rowspan="3" class="userimg"><img src="../images/userimages.png" alt=""></td><td class="name">校花</td><td class="gongju"><a class="louceng">33F</a></td></tr>
+                <tr><td class="content" colspan="2">装修公司实地工艺评测服务帮您从源头把关选择合适的装修公司装小蜜的提供不高于10家，资质装修公司的初步评测不高于3家装修公司实地选择合适的装修公司工艺评测服务装修公司
+                        实地工艺评测服务帮您从源头把关选择合适的装修公司装合适的装修工艺评测服务。</td></tr>
+                        <tr class="three"><td>45分钟前</td><td><span class="zang">|&nbsp;&nbsp;回复</span><span class="xinxi">赞（9）</span></td></tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <div class="footer_content">
+                    <p>装小蜜家装监理-管家式家装监理</p>
+                    <p>北京朝阳区SOHO现代城6号楼505室</p>
+                    <p>装小蜜投诉邮箱：ceo@ zhuangxiaomi.com</p>
+                    <p>© 2015 ZHUANGXIAOMI.COM     京ICP备13026313号</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

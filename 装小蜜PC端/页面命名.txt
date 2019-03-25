@@ -1,0 +1,12 @@
+首页	index.html
+登录页	login.html
+注册页	register.html
+找回密码	seek_pass.html
+登陆成功	user.html
+服务介绍 	service_introduce.html
+监理案例列表页	supervisor_list.html
+监理案例详情页	supervisor_details.html
+监理团队	supervisor_team.html
+文章列表页	article_list.html
+文章详情页	article_details.html
+用户个人中心页	user_center.html
