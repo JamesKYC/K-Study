@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap-box{
+            background: #cfc;
+        }
+        .wrap-box li{
+            height: 30px;
+            line-height: 30px;
+        }
+        .btn{
+            position:fixed;
+            bottom: 100px;
+            top: 100px;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="btn" class="btn">返回顶部</div>
+    <ul id="wrap" class="wrap-box"></ul>
+    <script>
+        var wrap = document.getElementById('wrap');
+        for(var i = 0;i < 200;i++){
+            wrap.innerHTML=wrap.innerHTML + '<li>' + i + '</li>'
+        }
+        var btn = document.getElementById('btn');
+        var timer = null;
+        btn.onclick = function(){
+            var valtop = document.documentElement.scrollTop || document.body.scrollTop;
+            timer = setInterval(function(){
+                valtop = valtop - 50;
+                if(valtop <= 0){
+                    valtop = 0;
+                    clearInterval(timer);
+                }
+                if(document.documentElement.scrollTop){
+                    document.documentElement.scrollTop = valtop;
+                }else{
+                    document.body.scrollTop = valtop;
+                }
+            },20)
+        }
+    </script>
+</body>
+</html>
