@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="gb2312">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0px;padding: 0px;}
+        .container{position: relative;margin: 0 auto;width: 580px;height: 580px;}
+        ul{float: right;position: absolute;left: 100%;margin-left: -88px;width: 88px;}
+        li{float: right;margin-bottom: 28px;width: 72px;height: 88px;list-style: none;text-align: center;line-height: 88px;font-size: 23px;font-weight: bold;color: #fff;background-color: rgba(156,158,159,0.7);}
+        .lis{width: 88px;opacity: 0.7;}
+        p{position: relative;top: 436px;text-align: center;line-height: 144px;font-size: 30px;font-weight: 800;color: black;background-color: rgba(180,179,176,0.7);}
+        .none{display: none;}
+    </style>
+</head>
+<body>
+    <div class="container" style="background-image: url(images/1.jpg);background-size: cover;">
+        <ul>
+            <li title="red">who</li>
+            <li title="yellow">where</li>
+            <li title="blue">sex</li>
+            <li title="green">age</li>
+        </ul>
+        <p class="none">我是澳大利亚国宝~~考拉！</p>
+        <p class="none">我来自澳大利亚~</p>
+        <p class="none">你说呢！</p>
+        <p class="none">我今年X岁咯！</p>
+        <p>猜猜我是谁？</p>
+    </div>
+    <script>
+        var num = '';
+        var content = document.getElementsByClassName('container')[0];
+        var lis = document.getElementsByTagName('li');
+        var pContent = document.getElementsByTagName('p');
+        for(var i = 0;i < lis.length;i++){
+            (function(i){
+                lis[i].onclick = function(){
+                    if(num){
+                        lis[num-1].style.backgroundColor = '';
+                    }
+                    for(j = 0;j < lis.length;j++){
+                        lis[j].className = '';
+                        pContent[j].className = 'none';
+                    }
+                    content.style.backgroundImage = 'url(images/'+i+'.jpg)';
+                    lis[i].className = 'lis';
+                    lis[i].style.backgroundColor = this.title;
+                    pContent[i].className = '';
+                    pContent[lis.length].className = 'none';
+                    num = i+1;
+                }
+            })(i);
+        }
+    </script>
+</body>
+</html>

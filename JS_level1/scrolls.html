@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="gb2312">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            margin: 0 auto;
+            overflow: hidden;
+            width: 500px;
+            border: 1px solid red;
+        }
+        .container::after{
+            position: relative;
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .content{
+            width: 3500px;
+        }
+        .img{
+            float: left;
+            width: 500px;
+            height: 250px;
+        }
+        ul.click{
+            margin: 0 auto;
+            width: 500px;
+            height: 100px;
+            background-color: black;
+        }
+        li{
+            margin: 10px;
+            list-style: none;
+            float: left;
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+        }
+        .lii{
+            opacity: 0.2;
+        }
+        .p{
+            position: absolute;
+            top: 250px;
+            left: 50%;
+            margin-left: -250px;
+            width: 500px;
+            color: #fff;
+        }
+        p{
+            margin-bottom: 10px;
+            width: 300px;
+            background-color: aqua;
+            transition: width,1s;
+        }
+        .none{
+            width: 500px;
+            transition: width,1s;
+        }
+        span{
+            position: absolute;
+            top: 110px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span><img src="images/left.png"></span>
+        <span style="right: 430px;"><img src="images/right.png"></span>
+        <div class="content">
+            <div class="img" style="background-color: rebeccapurple;"></div>
+            <div class="img" style="background-color: yellow;"></div>
+            <div class="img" style="background-color: blue;"></div>
+            <div class="img" style="background-color: green;"></div>
+            <div class="img" style="background-color: gray;"></div>
+            <div class="img" style="background-color: rebeccapurple;"></div>
+            <div class="img" style="background-color: yellow;"></div>
+        </div>
+    </div>
+    <div class="p">
+        <p class="none">1</p>
+        <p class="">2</p>
+        <p class="">3</p>
+        <p class="">4</p>
+        <p class="">5</p>
+    </div>
+    <script>
+        var container = document.getElementsByClassName('container')[0];
+        var lis = document.getElementsByTagName('span');
+        var pLabel = document.getElementsByClassName('p')[0].getElementsByTagName('p');
+        container.scrollLeft = 500;
+        var index = 1;
+        var timer;
+        var timerIndex;
+        var timerLAndR;
+        var judge = true;
+        /*
+        1.获取主容器标签和内容标签
+        2.从第2张开始计时器，累加距离不断移动
+            如果startpos 大于 endpos，则速度为正数，不断向前移动，若为负数，则速度为负数，不断向后移动
+            startPos += speed;
+            container.scroll = startPos;
+        3.到达最大值
+            startPos = endPos;
+            container.scroll = startPos;
+        4.封装其函数move
+        5.创建另一个计时器，并创建值为1的变量不断自加，来记录自身处的图片位置
+            当index大于或等于7时将其值设置为2
+            index = 1；index++；
+        6.设置一定的时间，并重复调用move函数
+        */
+        function move(endPos){
+            if(timer){
+                clearInterval(timer);
+            }
+            var num = index-1;
+            if(num == 5){
+                num = 0;
+            }
+            for(var i = 0;i < 5;i++){
+                pLabel[i].className = '';
+                if(i == num){
+                    pLabel[i].className = 'none';
+                }
+            }
+            var startPos = container.scrollLeft;
+            timer = setInterval(function(){
+                if(startPos < endPos){
+                    startPos += 15;
+                    if(startPos >= endPos){
+                        clearInterval(timer);
+                        startPos = endPos;
+                    }
+                }else{
+                    startPos -= 15;
+                    if(startPos <= endPos){
+                        clearInterval(timer);
+                        startPos = endPos;
+                    }
+                }
+                container.scrollLeft = startPos;
+            },20);
+        }
+        function moveImg(){
+            timerIndex = setInterval(function(){
+                ++index;
+                if(index > 6){
+                    index = 2;
+                    container.scrollLeft = 500;
+                }
+                move(index*500);
+            },2000);
+        }
+        moveImg();
+        lis[0].onclick = function(){
+            if(judge){
+                if(timerLAndR){
+                    clearTimeout(timerLAndR);
+                }
+                clearInterval(timerIndex);
+                --index;
+                // 当index小于1时表明其要从第二张跳到第六张的位置，此时直接将其定位至第七张的位置，并将index设置为5，也就是第六张的位置；
+                if(index < 1){
+                    index = 5;
+                    container.scrollLeft = 3000;
+                }
+                move(index*500);
+                moveImg();
+                //防止用户过度点击，计时器设置点击之后要一定时间后点击才能生效（通过judge变量来判断设置）
+                judge = false;
+                timerLAndR = setTimeout('judge = true',700);
+            }
+        }
+        lis[1].onclick = function(){
+            if(judge){
+                if(timerLAndR){
+                    clearTimeout(timerLAndR);
+                }
+                clearInterval(timerIndex);
+                ++index;
+                // 当index大于6时表明其要从第六张跳到第二张的位置，此时直接将其定位至第一张的位置，并将index设置为2，也就是第二张的位置；
+                if(index > 6){
+                    index = 2;
+                    container.scrollLeft = 500;
+                }
+                move(index*500);
+                moveImg();
+                judge = false;
+                timerLAndR = setTimeout('judge = true',700);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="gb2312">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin: 0 auto;
+            padding: 14px;
+            box-sizing: border-box;
+            width: 1100px;
+            font-weight: normal;
+            font-size: 20px;
+            font-family: '黑体';
+            color: #fff;
+            background-color: #E8E8F8;
+        }
+        .container::after{
+            content: '';
+            display:block;
+            clear: both;
+        }
+        .left{
+            float:left;
+            padding: 20px 10px;
+            width: 420px;
+            text-align: center;
+            background-color: #F0F0F8;
+        }
+        ul::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        li{
+            float: left;
+            margin: 8px 5px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            list-style: none;
+            text-align: center;
+            line-height: 50px;
+            /* background: radial-gradient(circle, #AEB8F8, #647DF8); */
+            background: radial-gradient(circle, #DEDEF8, #B9BFFA);
+        }
+        .left .lis{
+            background: radial-gradient(circle, #AEB8F8, #647DF8);
+        }
+        .left li:hover{
+            background: radial-gradient(circle, #AEB8F8, #647DF8);
+        }
+        .left p,a{
+            margin: 28px 0;
+            line-height: 46px;
+            text-align: center;
+            font-size: 20px;
+            color: #6E8CF8;
+        }
+        a{
+            line-height: 30px;
+        }
+        input{
+            margin: 0 15px;
+            border-radius: 5px;
+            border: 2px solid #D6D6F8;
+            width: 60px;
+            height: 46px;
+        }
+        button{
+            margin: 18px 12px 25px;
+            border-radius: 5px;
+            /* border: 1px solid #1364B5; */
+            border: 1px solid #B3292B;
+            width: 125px;
+            height: 48px;
+            font-weight: normal;
+            font-size: 20px;
+            font-family: '黑体';
+            color: #fff;
+            /* background: radial-gradient(circle, #4898E0, #2079DA); */
+            background: radial-gradient(circle, #F04141, #D0403F);
+        }
+        .left button{
+            margin: 0px 12px;
+            border: 1px solid #1364B5;
+            background: radial-gradient(circle, #4898E0, #2079DA);
+        }
+        .right{
+            float: right;
+            text-align: center;
+        }
+        .right_top,.right_bottom{
+            padding: 20px 20px 45px;
+            text-align: left;
+            background-color: #F0F0F8;
+        }
+        .right_top ul,.right_bottom ul{
+            margin: 0 50px;
+        }
+        .right_top ul li,.right_bottom ul li{
+            background: radial-gradient(circle, #AEB8F8, #647DF8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <ul class="left_ball">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>31</li>
+            </ul>
+            <p>投注数量<input type="text" name="" id="num">注</p>
+            <button id="random">机选</button>
+            <button id="bet">投注</button>
+        </div>
+        <div class="right">
+            <div class="right_top">
+                <a>选号结果</a>
+                <ul id="select">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <button id="lottery">开奖</button>
+            <button id="remove">取消</button>
+            <div class="right_bottom">
+                <a>开奖结果</a>
+                <ul id="result">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <a>开奖信息</a>
+                <div class="result" style="color:red;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var num = document.getElementById('num');
+        var left_ball = document.getElementsByClassName('left_ball')[0];
+        var lis = left_ball.getElementsByTagName('li');
+        var sel = document.getElementById('select').getElementsByTagName('li');
+        var result = document.getElementById('result').getElementsByTagName('li');
+        var random = document.getElementById('random');
+        var bet = document.getElementById('bet');
+        var lottery = document.getElementById('lottery');
+        var remove = document.getElementById('remove');
+        var texts = document.getElementsByClassName('result')[0];
+        var betJudge = false;
+        var select = true;
+        var arr = new Array();
+        var arrs = new Array();
+       function betSystem(num){
+            return function(){
+                    //判断其是否选中，若选中则为其添加class样式，并将值赋值给数组arr保存
+                    //若没有则执行else语句，去除样式，并将对应值从arr数组中去除
+                    if(this.className == ''){
+                        //判断选中个数是否已达7个，若已达，则无法选中
+                        if(arr.length == 7){
+                            alert('您已选满目标！');
+                            console.log(num);
+                        }else{
+                            this.className = 'lis';
+                            arr.push(num+1);
+                        }
+                    }else{
+                        this.className = '';
+                        //将闭包传过来的num值进行遍历判断，并将选中取消的值从arr数组中移除
+                        for(var j = 0;j < arr.length;j++){
+                            var n = arr[j];
+                            if(num+1 == n){
+                                arr.splice(j,1);
+                                break;
+                            }
+                        }
+                    }
+                
+            }
+        }
+        function addOrDelete(obj,arrays,judges){
+            var nus = 0;
+            if(Boolean(arrays.length)){
+                //首先，先判断其数组是否获取完成随机数
+                //其次，如果select为真，则代表为机选按钮，更改class样式；否则就是开奖按钮，去除其内容
+                if(select){
+                    for(var i = 0;i < arrays.length;i++){
+                        obj[arrays[i]-1].className = '';
+                    }
+                }else{
+                    for(var i = 0;i < 7;i++){
+                        obj[i].innerHTML = '';
+                    } 
+                }
+                arrays.splice(0,arrays.length);
+            }
+            for(var j = 0;j < 7;j++){
+                var x = parseInt(Math.random()*(31)+1); 
+                var judge = true;
+                for(var i = 0;i < arrays.length;i++){
+                    if(arrays[i] == x){
+                        judge = false;
+                        break;
+                    }
+                }
+                if(judge){
+                    judges?(x == parseInt(sel[j].innerHTML)?nus++:false):false;
+                    arrays.push(x);
+                    if(select){
+                        obj[x-1].className = 'lis';
+                    }else{
+                        obj[j].innerHTML = x;
+                    }
+                }else{
+                    --j;
+                }
+            }
+            judges?texts.innerHTML = (!betJudge?'抱歉，你还没下注！':(nus == 0?'抱歉，没中奖！':'恭喜您中奖了，总奖金为'+Math.pow(num.value,nus)+'元')):'';
+        }
+        function betAndRemove(){
+            if(betJudge){
+                if(!isNaN(num.value) && num.value != 0 && arr.length == 7){
+                    for(var j = 0;j < 7;j++){
+                        sel[j].innerHTML = arr[j];
+                    }
+                }else{
+                    alert('你的投注为空');
+                    betJudge = false;
+                }
+                
+            }else{
+                for(var i = 0;i < 7;i++){
+                    sel[i].innerHTML = '';
+                    result[i].innerHTML = '';
+                }
+            }
+        }
+        for(var i = 0;i < lis.length;i++){
+            lis[i].onclick = betSystem(i);
+        }
+        random.onclick = function(){
+            select = true;
+            addOrDelete(lis,arr,false);
+        }
+        bet.onclick = function(){
+            betJudge = true;
+            betAndRemove(betJudge);
+        }
+        lottery.onclick = function(){
+            select = false;
+            addOrDelete(result,arrs,true);
+        }
+        remove.onclick = function(){
+            betJudge = false;
+            num.value = '';
+            betAndRemove(betJudge);
+        }
+    </script>
+</body>
+</html>
